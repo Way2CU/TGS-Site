@@ -11,6 +11,7 @@
     to {bottom: 180px;}
 }
 
+div#video,
 div#intro {
 	display: block;
 	margin-top: 96px;
@@ -37,6 +38,41 @@ div#intro:before {
 	height: 40px;
 	transform: translateZ(0);
 	animation: bounce 1s linear infinite alternate;
+}
+
+div#video {
+	margin-top: 0px;
+	min-height: auto;
+	text-align: center;
+	background-image: none;
+	padding: 20px calc(~'(100% - 1200px)'/ 2);
+}
+
+div#video h2 {
+	text-align: center;
+	margin: 0px;
+	font-size: 3em;
+}
+
+div#video p {
+	margin-left: auto;
+	margin-right: auto;
+	width: 600px;
+	font-weight: 700;
+}
+
+div#video div.video_wrap {
+	display: inline-block;
+	border: 3px solid @color_ac_grey;
+	border-radius: @border-radius;
+	position: relative;
+	overflow: hidden;
+}
+
+div#video div.video_wrap iframe {
+	display: block;
+	padding: 20px;
+	background-color: @color_text;
 }
 
 div#intro h1 {
