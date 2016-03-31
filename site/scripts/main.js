@@ -109,18 +109,17 @@ Site.on_load = function() {
 	var position = $('div#features').offset().top - 400;
 	var features_links = $('div#features li.stock.feature');
 
-	// self_window.scroll(function (event) {
-	// 	if(self_window.scrollTop() >= position && is_position) {
-	// 		is_position = false;
-	// 		features_links.each(function() {
-	// 			var self = $(this);
-	// 			var end_value = parseInt(self.find('h4').text());
-	// 			new Tween(self.find('h4'), 0, end_value, 5000);
-	// 		});
-	// 	}
-	// });
+	self_window.scroll(function (event) {
+		if(self_window.scrollTop() >= position && is_position) {
+			is_position = false;
+			features_links.each(function() {
+				var self = $(this);
+				var end_value = parseInt(self.find('h4').text());
+				new Tween(self.find('h4'),0, end_value,5000);
+			});
+		}
+	});
 };
-
 
 // connect document `load` event with handler function
 $(Site.on_load);
