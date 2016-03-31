@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../../units/schema/language.dtd">
+<!--
+	Generic features template with image, text and optional title.
+
+	The following parameters are accepted:
+		title  - If present will show title of specified article;
+		sprite - SVG file in images directory.
+
+	The following parameters are required: sprite_icon
+-->
+<document>
+	<li class="stock links">
+		<cms:if condition="isset($template['title'])">
+			<a href="$params['url']" cms:eval="href">
+			<cms:if condition="isset($template['sprite'])">
+				<svg>
+					<use
+						href="'#'.$params['text_id']"
+						xlink:href="$template['sprite'].'#'.$params['text_id']"
+						cms:eval="href,xlink:href"
+						/>
+				</svg>
+			</cms:if>
+				<cms:markdown param="description" multilanguage="yes"/>
+			</a>
+		</cms:if>
+
+	</li>
+</document>
