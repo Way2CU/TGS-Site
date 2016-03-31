@@ -1,0 +1,16 @@
+<document>
+	<div class="video_wrap">
+		<cms:module
+			name="youtube"
+			action="show"
+			id="$params['id']"
+			embed="1"
+			width="800"
+			height="483"
+			enable_api="1"
+			allowfullscreen="true"
+			frameborder="0"
+			cms:eval="id"
+		/>	
+	</div>
+</document>
