@@ -20,6 +20,22 @@
 					template="parts/article.xml"
 					/>
 			</div>
+
+			<div id="video">
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="our_mission"
+					template="parts/article.xml"
+					/>
+
+				<cms:module
+					name="youtube"
+					action="show"
+					text_id="tgs_video"
+					template="parts/video.xml"
+					/>
+			</div>
 		</body>
 	</html>
 </document>
