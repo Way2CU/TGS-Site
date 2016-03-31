@@ -1,0 +1,35 @@
+<document>
+	<footer>
+		<div class="information">
+			<ul class="information">
+				<cms:module
+					name="links"
+					action="show_link_list"
+					group="information_links"
+					template="stock/links_generic.xml"
+					>
+					<param name="title" value=""/>
+					<param name="sprite" value="site/images/site-sprite.svg"/>
+				</cms:module>
+			</ul>
+
+			<ul class="social">
+				<cms:module
+					name="links"
+					action="show_link_list"
+					group="social_links"
+					template="stock/links_generic.xml"
+					>
+					<param name="title" value=""/>
+					<param name="sprite" value="site/images/site-sprite.svg"/>
+				</cms:module>
+			</ul>
+		</div>
+
+		<cms:template file="stock/copyright.xml">
+			<param name="holder" value="copyright_holder"/>
+			<param name="text" value="copyright_text"/>
+			<param name="light" value=""/>
+		</cms:template>
+	</footer>
+</document>
