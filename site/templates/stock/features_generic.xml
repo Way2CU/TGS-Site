@@ -21,7 +21,7 @@
 					/>
 			</svg>
 		</cms:if>
-
+		
 		<!-- Title -->
 		<cms:if condition="isset($template['title'])">
 			<h4><cms:var param="title" multilanguage="yes"/></h4>
