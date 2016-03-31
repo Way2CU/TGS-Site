@@ -40,20 +40,36 @@ div#intro:before {
 	animation: bounce 1s linear infinite alternate;
 }
 
+div#location,
+div#features,
 div#video {
 	margin-top: 0px;
 	min-height: auto;
 	text-align: center;
 	background-image: none;
-	padding: 20px calc(~'(100% - 1200px)'/ 2);
+	padding: 0px calc(~'(100% - 1200px)'/ 2);
 }
 
+div#location {
+	padding: 50px calc(~'(100% - 1200px)'/ 2);
+}
+
+div#features {
+	margin-top: -200px;
+	padding-top: 250px;
+	padding-bottom: 50px;
+	background-color: @color_ac_blue;
+	color: @color_ac_white;
+}
+
+div#location h2,
 div#video h2 {
 	text-align: center;
 	margin: 0px;
 	font-size: 3em;
 }
 
+div#location p,
 div#video p {
 	margin-left: auto;
 	margin-right: auto;
@@ -126,4 +142,52 @@ div#intro a:before {
 	background-color: @color_ac_blue;
 	transition: all 0.3s;
 	z-index: -1;
+}
+
+// features section
+div#features ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+div#features ul li {
+	display: inline-block;
+	vertical-align: top;
+	width: 25%;
+}
+
+div#features ul li svg {
+	display: inline-block;
+	width: 65px;
+	height: 65px;
+	fill: @color_ac_white;
+}
+
+div#features ul li h4 {
+	margin: 0px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	color: @color_ac_white;
+	font-weight: 400;
+	font-size: 2.5em;
+}
+
+div#features ul li p {
+	margin-bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+}
+
+div#location div.map {
+	display: block;
+	margin-top: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 953px;
+	height: 480px;
+	background-image: url(../images/map.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
 }
