@@ -4,4 +4,19 @@
 	<section name="home">
 		<language name="all" file="home.xml" />
 	</section>
+	<section name="about">
+		<language name="all" file="about.xml" />
+	</section>
+	<section name="team">
+		<language name="all" file="team.xml" />
+	</section>
+	<section name="careers">
+		<language name="all" file="careers.xml" />
+	</section>
+	<section name="tgs">
+		<language name="all" file="tgs.xml" />
+	</section>
+	<section name="contact">
+		<language name="all" file="contact.xml" />
+	</section>
 </document>
