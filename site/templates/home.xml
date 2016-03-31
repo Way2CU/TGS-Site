@@ -61,6 +61,9 @@
 				<!-- container for map-->
 				<div class="map"></div>
 			</div>
+
+			<!-- Bottom section of the site -->
+			<cms:template file="parts/footer.xml"/>
 		</body>
 	</html>
 </document>
