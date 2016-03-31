@@ -1,0 +1,52 @@
+<document>
+	<header>
+		<cms:svg file="site-sprite.svg"/>
+
+		<a href="url_Make('', 'home')" class="logo" cms:eval="href">
+			<img src="_BASEURL.'/site/images/logo.svg'"  alt="logo" cms:eval="src"/>
+		</a>
+
+		<nav>
+			<a
+				class="$section == 'about' ? 'active' : false"
+				href="url_Make('', 'about')"
+				cms:eval="href"
+				cms:optional="class"
+				>
+				<cms:text constant="menu_about"/>
+			</a>
+			<a
+				class="$section == 'team' ? 'active' : false"
+				href="url_Make('', 'team')"
+				cms:eval="href"
+				cms:optional="class"
+				>
+				<cms:text constant="menu_team"/>
+			</a>
+			<a
+				class="$section == 'careers' ? 'active' : false"
+				href="url_Make('', 'careers')"
+				cms:eval="href"
+				cms:optional="class"
+				>
+				<cms:text constant="menu_careers"/>
+			</a>
+			<a
+				class="$section == 'tgs' ? 'active' : false"
+				href="url_Make('', 'tgs')"
+				cms:eval="href"
+				cms:optional="class"
+				>
+				<cms:text constant="menu_tgs"/>
+			</a>
+			<a
+				class="$section == 'contact' ? 'active' : false"
+				href="url_Make('', 'contact')"
+				cms:eval="href"
+				cms:optional="class"
+				>
+				<cms:text constant="menu_contact"/>
+			</a>
+		</nav>
+	</header>
+</document>
