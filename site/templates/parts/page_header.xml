@@ -1,5 +1,5 @@
 <document>
-	<section style="'background-image: url('.$params['image'].');'" cms:eval="style">
+	<section class="header" style="'background-image: url('.$params['image'].');'" cms:eval="style">
 		<div class="content">
 			<cms:markdown param="description" multilanguage="yes"/>
 		</div>

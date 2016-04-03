@@ -43,7 +43,6 @@ div#intro:before {
 	animation: bounce 1s linear infinite alternate;
 }
 
-section,
 div#location,
 div#features,
 div#video {
@@ -54,9 +53,10 @@ div#video {
 	padding: 0px calc(~'(100% - 1200px)'/ 2);
 }
 
-section {
+section.header {
 	padding: 0px;
 	display: block;
+	text-align: center;
 	width: 100%;
 	height: 250px;
 
@@ -65,20 +65,20 @@ section {
 	background-attachment: fixed;
 }
 
-section:before {
+section.header:before {
 	content: "";
 	display: inline-block;
 	vertical-align: middle;
 	height: 100%;
 }
 
-section div.content {
+section.header div.content {
 	display: inline-block;
 	vertical-align: middle;
 }
 
-section div.content p,
-section div.content h1 {
+section.header div.content p,
+section.header div.content h1 {
 	width: 600px;
 	color: @color_text;
 	font-style: italic;
