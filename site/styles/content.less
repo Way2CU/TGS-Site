@@ -40,6 +40,7 @@ div#intro:before {
 	animation: bounce 1s linear infinite alternate;
 }
 
+section,
 div#location,
 div#features,
 div#video {
@@ -48,6 +49,30 @@ div#video {
 	text-align: center;
 	background-image: none;
 	padding: 0px calc(~'(100% - 1200px)'/ 2);
+}
+
+section {
+	margin-top: 96px;
+	padding: 0px;
+}
+
+section h1 {
+	display: block;
+	margin: 0px;
+	vertical-align: middle;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-attachment: fixed;
+	font-style: italic;
+	color: @color_text;
+	height: 400px;
+}
+
+section h1:before {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
 }
 
 div#location {
@@ -190,4 +215,79 @@ div#location div.map {
 	background-image: url(../images/map.jpg);
 	background-repeat: no-repeat;
 	background-position: center center;
+}
+
+// contact form 
+
+div#form_wrap {
+	padding: 50px calc(~'(100% - 1200px)'/ 2);
+}
+
+div#form_wrap fieldset {
+	display: inline-block;
+	vertical-align: top;
+	border: none;
+	width: 45%;
+}
+
+div#form_wrap fieldset label {
+	display: block;
+	margin-bottom: 15px;
+}
+
+div#form_wrap fieldset label textarea,
+div#form_wrap fieldset label input,
+div#form_wrap fieldset label span {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+div#form_wrap fieldset label span {
+	text-align: left;
+	color: @color_text;
+	width: 150px;
+}
+
+div#form_wrap fieldset label textarea,
+div#form_wrap fieldset label input {
+	padding-left: 5px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	border: 2px solid lighten(@color_ac_grey, 20%);
+	width: calc(~'(100% - 165px)');
+	transition: all 0.3s;
+}
+
+div#form_wrap fieldset label textarea:focus,
+div#form_wrap fieldset label input:focus,
+div#form_wrap fieldset label textarea:hover,
+div#form_wrap fieldset label input:hover {
+	border: 2px solid @color_ac_blue;
+}
+
+div#form_wrap fieldset label textarea {
+	resize: vertical;
+}
+
+div#form_wrap div.controls {
+	text-align: center;
+}
+
+div#form_wrap div.controls button {
+	display: inline-block;
+	padding-top: 13px;
+	padding-bottom: 13px;
+	padding-left: 60px;
+	padding-right: 60px;
+	color: @color_ac_blue;
+	border: 2px solid @color_ac_blue;
+	background-color: @color_ac_white;
+	border-radius: @border-radius;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+div#form_wrap div.controls button:hover {
+	background-color: @color_ac_blue;
+	color: @color_ac_white;
 }
