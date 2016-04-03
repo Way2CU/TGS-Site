@@ -115,7 +115,7 @@ Site.on_load = function() {
 			features_links.each(function() {
 				var self = $(this);
 				var end_value = parseInt(self.find('h4').text());
-				new Tween(self.find('h4'),0, end_value,5000);
+				new Tween(self.find('h4'),0, end_value,2000);
 			});
 		}
 	});
