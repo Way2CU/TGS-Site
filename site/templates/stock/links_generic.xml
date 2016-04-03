@@ -13,18 +13,17 @@
 	<li class="stock links">
 		<cms:if condition="isset($template['title'])">
 			<a href="$params['url']" cms:eval="href">
-			<cms:if condition="isset($template['sprite'])">
-				<svg>
-					<use
-						href="'#'.$params['text_id']"
-						xlink:href="$template['sprite'].'#'.$params['text_id']"
-						cms:eval="href,xlink:href"
-						/>
-				</svg>
-			</cms:if>
+				<cms:if condition="isset($template['sprite'])">
+					<svg>
+						<use
+							href="'#'.$params['text_id']"
+							xlink:href="$template['sprite'].'#'.$params['text_id']"
+							cms:eval="href,xlink:href"
+							/>
+					</svg>
+				</cms:if>
 				<cms:markdown param="description" multilanguage="yes"/>
 			</a>
 		</cms:if>
-
 	</li>
 </document>
