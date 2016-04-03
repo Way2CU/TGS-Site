@@ -1,5 +1,7 @@
 <document>
-	<h1 style="'background-image: url('.$params['image'].');'" cms:eval="style">
-		<cms:var param="title" multilanguage="yes"/>
-	</h1>
+	<section style="'background-image: url('.$params['image'].');'" cms:eval="style">
+		<div class="content">
+			<cms:markdown param="description" multilanguage="yes"/>
+		</div>
+	</section>
 </document>
