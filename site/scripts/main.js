@@ -100,7 +100,7 @@ Site.on_load = function() {
 	if($('div#intro').length > 0) {
 		Site.menu = new FloatingMenu($('header'),$('header'));
 	} else {
-		Site.menu = new FloatingMenu($('header'),$('section.header').next());
+		Site.menu = new FloatingMenu($('header'),$('section').first().next());
 	}
 
 };
