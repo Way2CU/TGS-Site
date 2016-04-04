@@ -1,0 +1,6 @@
+<document>
+	<a  class="brand" href="$params['url']" cms:eval="href">
+		<img src="$params['image']" alt="$params['text'][$language]" cms:eval="src,alt"/>
+		<cms:var param="text" multilanguage="yes"/>
+	</a>
+</document>
