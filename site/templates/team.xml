@@ -20,8 +20,17 @@
 					name="gallery"
 					action="show_image"
 					text_id="team"
-					template="parts/page_header.xml"
+					template="parts/page_header_white.xml"
 					/>
+
+				<section>
+					<cms:module
+						name="gallery"
+						action="show_group_list"
+						container="team"
+						template="parts/team_members_list.xml"
+						/>
+				</section>
 
 			<!-- Bottom section of the site -->
 			<cms:template file="parts/footer.xml"/>
