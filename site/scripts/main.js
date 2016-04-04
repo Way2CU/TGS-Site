@@ -49,7 +49,7 @@ Site.is_mobile = function() {
  * @param object menu               jQuery object
  * @param object trigger_element    jQuery object
  */
-function FloatingMenu(menu, trigger_element){
+function FloatingMenu(menu, trigger_element) {
     var self = this;
 
     self.menu = menu;
