@@ -300,10 +300,28 @@ div#form_wrap div.controls button {
 	border-radius: @border-radius;
 	cursor: pointer;
 	transition: all 0.3s;
+	overflow: hidden;
+	position: relative;
+	z-index: 0;
+}
+
+div#form_wrap div.controls button:hover:before {
+	left: 0%;
+}
+
+div#form_wrap div.controls button:before {
+	content: "";
+	position: absolute;
+	top: 0px;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background-color: @color_ac_blue;
+	transition: all 0.3s;
+	z-index: -1;
 }
 
 div#form_wrap div.controls button:hover {
-	background-color: @color_ac_blue;
 	color: @color_ac_white;
 }
 
