@@ -52,7 +52,7 @@
 				</ul>
 			</div>
 
-			<div id="location">
+			<div id="locations">
 				<cms:module
 					name="articles"
 					action="show"
