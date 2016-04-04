@@ -98,7 +98,7 @@ Site.on_load = function() {
 
 	// create floating menu object
 	if($('div#intro').length > 0) {
-		Site.menu = new FloatingMenu($('header'),$('div#intro').next());
+		Site.menu = new FloatingMenu($('header'),$('header'));
 	} else {
 		Site.menu = new FloatingMenu($('header'),$('section.header').next());
 	}
