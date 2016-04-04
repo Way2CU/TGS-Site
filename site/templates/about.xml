@@ -23,37 +23,7 @@
 					template="parts/page_header.xml"
 					/>
 
-				<section>
-					<h2><cms:text constant="title_brands"/></h2>
-					<cms:module
-						name="links"
-						action="show_link_list"
-						group="brands"
-						template="parts/brand_links.xml"
-						/>
-				</section>
-
-				<section>
-					<h2><cms:text constant="title_brands"/></h2>
-					<cms:module
-						name="links"
-						action="show_link_list"
-						group="brands"
-						template="parts/brand_links.xml"
-						/>
-				</section>
-
-				<section>
-					<h2><cms:text constant="title_brands"/></h2>
-					<cms:module
-						name="links"
-						action="show_link_list"
-						group="brands"
-						template="parts/brand_links.xml"
-						/>
-				</section>
-
-				<section>
+				<section class="grey">
 					<h2><cms:text constant="title_brands"/></h2>
 					<cms:module
 						name="links"
