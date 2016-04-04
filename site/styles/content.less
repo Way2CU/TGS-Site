@@ -44,7 +44,7 @@ div#intro:before {
 }
 
 section,
-div#location,
+div#locations,
 div#features,
 div#video {
 	margin-top: 0px;
@@ -90,7 +90,7 @@ section.header div.content h1 {
 	text-shadow: 1px 1px fade(@color_ac_white,80%);
 }
 
-div#location {
+div#locations {
 	padding: 50px calc(~'(100% - 1200px)'/ 2);
 }
 
@@ -103,14 +103,14 @@ div#features {
 }
 
 section h2,
-div#location h2,
+div#locations h2,
 div#video h2 {
 	text-align: center;
 	margin-top: 0px;
 	font-size: 3em;
 }
 
-div#location p,
+div#locations p,
 div#video p {
 	margin-left: auto;
 	margin-right: auto;
@@ -121,7 +121,7 @@ div#video p {
 div#video div.video_wrap {
 	display: inline-block;
 	border: 3px solid @color_ac_grey;
-	border-radius: @border-radius;
+	border-radius: @border-radius + 10px;
 	position: relative;
 	overflow: hidden;
 }
@@ -221,7 +221,7 @@ div#features ul li p {
 	width: 90%;
 }
 
-div#location div.map {
+div#locations div.map {
 	display: block;
 	margin-top: 40px;
 	margin-left: auto;
@@ -234,7 +234,6 @@ div#location div.map {
 }
 
 // contact form 
-
 div#form_wrap {
 	padding: 50px calc(~'(100% - 1200px)'/ 2);
 }
