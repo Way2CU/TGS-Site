@@ -53,8 +53,12 @@ footer div.information ul li a {
 	transition: all 0.3s;
 }
 
+footer div.information ul li a:hover svg {
+	fill: fade(@color_ac_white, 80%);
+}
+
 footer div.information ul li a:hover {
-	color: @color_ac_grey;
+	color: fade(@color_ac_white, 80%);
 }
 
 footer div.information ul li a svg {
