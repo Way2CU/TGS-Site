@@ -1,0 +1,11 @@
+<document>
+	<div class="team_member">
+		<cms:module
+			name="gallery"
+			action="show_image_list"
+			group_id="$params['id']"
+			template="parts/team_member_images.xml"
+			cms:eval="group_id"
+			/>
+	</div>
+</document>
