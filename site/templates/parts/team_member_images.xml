@@ -1,0 +1,10 @@
+<document>
+	<img 
+		class="$params['text_id']" 
+		src="$params['image']" 
+		alt="$params['text_id']" 
+		cms:eval="src,alt,class"
+		/>
+	<p class="name"><cms:var param="title" multilanguage="yes"/></p>
+	<cms:markdown param="description" multilanguage="yes"/>
+</document>
