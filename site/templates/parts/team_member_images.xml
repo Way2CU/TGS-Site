@@ -2,7 +2,7 @@
 	<img 
 		class="$params['text_id']" 
 		src="$params['image']" 
-		alt="$params['text_id']" 
+		alt="$params['title'][$language]" 
 		cms:eval="src,alt,class"
 		/>
 	<p class="name"><cms:var param="title" multilanguage="yes"/></p>
