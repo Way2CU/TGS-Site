@@ -9,7 +9,7 @@
 		The following parameters are required: sprite_icon
 	-->
 		<label class="job">
-			<input type="checkbox" id="$params['text_id']" cms:eval="id"/>
+			<input type="checkbox" checked="checked" id="$params['text_id']" cms:eval="id"/>
 			<!-- Sprite image -->
 			<cms:if condition="isset($template['sprite'])">
 				<figure>
