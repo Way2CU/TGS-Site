@@ -56,7 +56,7 @@ div#video {
 }
 
 section {
-	padding: 50px calc(~'(100% - 1280px)'/ 2);
+	padding: 50px calc(~'(100% - 1200px)'/ 2);
 }
 
 section article.about {
@@ -176,6 +176,7 @@ div#intro strong {
 	font-style: normal;
 }
 
+div.job_form a,
 div#intro a {
 	display: inline-block;
 	text-decoration: none;
@@ -195,15 +196,22 @@ div#intro a {
 	z-index: 0;
 }
 
+div.job_form a {
+	font-size: 1.1rem;
+}
+
+div.job_form a:hover,
 div#intro a:hover {
 	border-color: @color_ac_blue;
 	color: @color_ac_white;
 }
 
+div.job_form a:hover:before,
 div#intro a:hover:before {
 	left: 0%;
 }
 
+div.job_form a:before,
 div#intro a:before {
 	content: '';
 	position: absolute;
@@ -276,9 +284,44 @@ div#form_wrap fieldset {
 	width: 45%;
 }
 
+div.job_form label,
 div#form_wrap fieldset label {
 	display: block;
 	margin-bottom: 15px;
+}
+
+div.job_form label {
+	position: relative;
+}
+
+div.job_form label:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	margin-top: -15px;
+	left: 5px;
+	background-image: url(../images/icon-sprite.svg);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	background-size: 420px 30px;
+	width: 30px;
+	height: 30px;
+}
+
+div.job_form label:nth-of-type(4):before {
+	top: 20px;
+}
+
+div.job_form label:nth-of-type(2):before {
+	background-position: -30px 0px;
+}
+
+div.job_form label:nth-of-type(3):before {
+	background-position: -60px 0px;
+}
+
+div.job_form label:nth-of-type(4):before {
+	background-position: -360px 0px;
 }
 
 div#form_wrap fieldset label textarea,
@@ -294,6 +337,8 @@ div#form_wrap fieldset label span {
 	width: 150px;
 }
 
+div.job_form label input,
+div.job_form label textarea,
 div#form_wrap fieldset label textarea,
 div#form_wrap fieldset label input {
 	padding-left: 5px;
@@ -304,6 +349,14 @@ div#form_wrap fieldset label input {
 	transition: all 0.3s;
 }
 
+div.job_form label input,
+div.job_form label textarea {
+	padding-left: 40px;
+	width: calc(~'(100% - 40px)');
+}
+
+div.job_form label input:focus,
+div.job_form label textarea:focus,
 div#form_wrap fieldset label textarea:focus,
 div#form_wrap fieldset label input:focus,
 div#form_wrap fieldset label textarea:hover,
@@ -311,14 +364,17 @@ div#form_wrap fieldset label input:hover {
 	border: 2px solid @color_ac_blue;
 }
 
+div.job_form label textarea,
 div#form_wrap fieldset label textarea {
 	resize: vertical;
 }
 
+div.job_form div.controls,
 div#form_wrap div.controls {
 	text-align: center;
 }
 
+div.job_form div.controls button,
 div#form_wrap div.controls button {
 	display: inline-block;
 	padding-top: 13px;
@@ -336,10 +392,12 @@ div#form_wrap div.controls button {
 	z-index: 0;
 }
 
+div.job_form div.controls button:hover:before,
 div#form_wrap div.controls button:hover:before {
 	left: 0%;
 }
 
+div.job_form div.controls button:before,
 div#form_wrap div.controls button:before {
 	content: "";
 	position: absolute;
@@ -352,6 +410,7 @@ div#form_wrap div.controls button:before {
 	z-index: -1;
 }
 
+div.job_form div.controls button:hover,
 div#form_wrap div.controls button:hover {
 	color: @color_ac_white;
 }
@@ -518,7 +577,6 @@ article.job_preview.hidden {
 	margin-bottom: 0px;
 }
 
-
 article.job_preview:last-of-type {
 	margin-bottom: 0px;
 }
@@ -584,4 +642,64 @@ article.job_preview a {
 
 article.job_preview a:hover {
 	background-color: lighten(@color_ac_blue, 10%);
+}
+
+article.job_description {
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+	width: 60%;
+}
+
+article.job_description h2 {
+	margin: 0px;
+	padding-bottom: 10px;
+	text-align: left;
+}
+
+article.job_description h4 {
+	margin: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+article.job_description ul:first-of-type {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+article.job_description ul:first-of-type li {
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-right: 1px solid @color_text;
+	font-weight: 700;
+}
+
+article.job_description ul {
+	margin: 0px;
+	padding: 0px;
+	padding-left: 20px;
+}
+
+article.job_description ul li {
+	padding-bottom: 5px;
+}
+
+article.job_description ul li:last-of-type {
+	padding-bottom: 0px;
+}
+
+div.job_form {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 5%;
+	text-align: center;
+	width: 30%;
+}
+
+div.job_form p {
+	font-weight: 700;
 }
