@@ -5,8 +5,11 @@
     "menu_careers": "Careers",
     "menu_tgs": "Life at tgs",
     "menu_contact": "Contact us",
-    "label_read_more": "Read more",
+    "button_apply_position": "Apply for this position",
+    "button_read_more": "Read more",
+    "title_share": "Like it ? share it:",
     "title_brands": "Our brands",
+    "title_job_form": "Or fill out the form and send it to us:",
     "copyright_holder": "Copyright &copy; 2015. by <a href=\"http://way2cu.com\" target=\"_blank\">Way2CU</a>.",
     "copyright_text": "All rights reserved."
 }
