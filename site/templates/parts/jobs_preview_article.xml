@@ -5,7 +5,7 @@
 		</h4>
 		<cms:markdown param="content" multilanguage="yes"/>
 		<a
-			href="url_Make('', 'contact')"
+			href="url_Make('view', 'careers',array('id',$params['id']))"
 			cms:eval="href"
 			>
 			<cms:text constant="label_read_more"/>
