@@ -1,0 +1,14 @@
+<document>
+	<article class="job_preview" data-id="$params['text_id']" cms:eval="data-id">
+		<h4>
+			<cms:var param="title" multilanguage="yes"/>
+		</h4>
+		<cms:markdown param="content" multilanguage="yes"/>
+		<a
+			href="url_Make('', 'contact')"
+			cms:eval="href"
+			>
+			<cms:text constant="label_read_more"/>
+		</a>
+	</article>
+</document>
