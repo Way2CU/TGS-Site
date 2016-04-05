@@ -1,5 +1,5 @@
 <document>
-	<article class="job_preview" data-id="$params['text_id']" cms:eval="data-id">
+	<article class="job_preview visible" data-id="$params['text_id']" cms:eval="data-id">
 		<h4>
 			<cms:var param="title" multilanguage="yes"/>
 		</h4>
