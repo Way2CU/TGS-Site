@@ -23,6 +23,15 @@
 					template="parts/page_header.xml"
 					/>
 
+				<section>
+					<cms:module
+						name="articles"
+						action="show"
+						text_id="about"
+						template="parts/article2.xml"
+						/>
+				</section>
+
 				<section class="grey">
 					<h2><cms:text constant="title_brands"/></h2>
 					<cms:module
