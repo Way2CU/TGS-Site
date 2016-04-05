@@ -8,7 +8,7 @@
 			href="url_Make('view', 'careers',array('id',$params['id']))"
 			cms:eval="href"
 			>
-			<cms:text constant="label_read_more"/>
+			<cms:text constant="button_read_more"/>
 		</a>
 	</article>
 </document>
