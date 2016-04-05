@@ -75,7 +75,7 @@ section article.about h2 {
 }
 
 section.grey {
-	background-color: lighten(@color_ac_grey, 40%);
+	background-color: @color_ac_bright_grey;
 }
 
 section.white,
@@ -437,4 +437,151 @@ ul#team li img.regular {
 ul#team li img.animated {
 	transform:scale(0);
 	transition: all 0.6s;
+}
+
+label.job {
+	display: inline-block;
+	vertical-align: top;
+	width: 20%;
+	cursor: pointer;
+}
+
+label.job input {
+	display: none;
+}
+
+label.job input:checked ~ figure {
+	background-color: @color_ac_blue;
+	border-color: transparent;
+}
+
+label.job input:checked ~ figure:hover {
+	background-color: lighten(@color_ac_blue, 10%);
+}
+
+label.job:hover h4,
+label.job input:checked ~ h4 {
+	color: @color_ac_blue;
+}
+
+label.job input:checked ~ figure svg {
+	fill: @color_ac_white;
+}
+
+label.job figure {
+	display: inline-block;
+	margin: 0px;
+	padding: 25px;
+	border-radius: 50%;
+	border: 2px solid @color_ac_grey;
+	transition: all 0.3s;
+}
+
+label.job figure:hover {
+	border-color: @color_ac_blue;
+}
+
+label.job svg {
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	fill: @color_ac_grey;
+	transition: all 0.3s;
+}
+
+label.job h4 {
+	color: @color_text;
+	transition: all 0.3s;
+	margin-bottom: 0px;
+}
+article.job_preview {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	padding: 20px;
+	padding-bottom: 60px;
+	text-align: left;
+	width: 80%;
+	background-color: @color_ac_bright_grey;
+	position: relative;
+	opacity: 1;
+	overflow: hidden;
+	visibility: visible;
+	max-height: 100px;
+	transition: all 0.3s;
+}
+
+article.job_preview.hidden {
+	max-height: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+
+
+article.job_preview:last-of-type {
+	margin-bottom: 0px;
+}
+
+article.job_preview h6,
+article.job_preview h5,
+article.job_preview h4,
+article.job_preview h3,
+article.job_preview h2,
+article.job_preview h1,
+article.job_preview p,
+article.job_preview ul {
+	display: none;
+}
+
+article.job_preview h4:first-of-type {
+	display: block;
+	margin: 0px;
+}
+
+article.job_preview p:first-of-type {
+	display: block;
+}
+
+article.job_preview ul:first-of-type{
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	position: absolute;
+	top: 20px;
+	right: 15px;
+}
+
+article.job_preview ul:first-of-type li {
+	display: inline-block;
+	padding-right: 5px;
+	padding-left: 5px;
+	font-weight: 700;
+	border-right: 1px solid @color_text;
+}
+
+article.job_preview ul li:last-of-type {
+	border-right: none;
+}
+
+article.job_preview a {
+	display: inline-block;
+	text-decoration: none;
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+	color: @color_ac_white;
+	border: 2px solid @color_ac_blue;
+	background-color: @color_ac_blue;
+	border-radius: @border-radius;
+	transition: all 0.3s;
+}
+
+article.job_preview a:hover {
+	background-color: lighten(@color_ac_blue, 10%);
 }
