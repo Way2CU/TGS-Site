@@ -24,12 +24,14 @@
 					/>
 
 				<section>
-					<cms:module
-						name="gallery"
-						action="show_group_list"
-						container="team"
-						template="parts/team_members_list.xml"
-						/>
+					<ul id="team">
+						<cms:module
+							name="gallery"
+							action="show_group_list"
+							container="team"
+							template="parts/team_members_list.xml"
+							/>
+					</ul>
 				</section>
 
 			<!-- Bottom section of the site -->

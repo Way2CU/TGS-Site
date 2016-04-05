@@ -1,5 +1,5 @@
 <document>
-	<div class="team_member">
+	<li>
 		<cms:module
 			name="gallery"
 			action="show_image_list"
@@ -7,5 +7,5 @@
 			template="parts/team_member_images.xml"
 			cms:eval="group_id"
 			/>
-	</div>
+	</li>
 </document>

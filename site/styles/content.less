@@ -387,7 +387,13 @@ section a.brand img {
 	transition: all 0.3s;
 }
 
-div.team_member {
+ul#team {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+ul#team li {
 	display: inline-block;
 	vertical-align: top;
 	padding-top: 195px;
@@ -395,25 +401,25 @@ div.team_member {
 	position: relative;
 }
 
-div.team_member:hover p {
+ul#team li:hover p {
 	color: @color_ac_blue;
 }
 
-div.team_member p.name {
+ul#team li p.name {
 	font-weight: 700;
 	font-size: 1.2em;
 	transition: all 0.3s;
 }
 
-div.team_member:hover img.regular {
+ul#team li:hover img.regular {
 	transform:scale(0);
 }
 
-div.team_member:hover img.animated {
+ul#team li:hover img.animated {
 	transform:scale(1);
 }
 
-div.team_member img {
+ul#team li img {
 	position: absolute;
 	top: 0px;
 	left: 50%;
@@ -423,12 +429,12 @@ div.team_member img {
 	border-radius: 50%;
 }
 
-div.team_member img.regular {
+ul#team li img.regular {
 	transform:scale(1);
 	transition: all 0.6s;
 }
 
-div.team_member img.animated {
+ul#team li img.animated {
 	transform:scale(0);
 	transition: all 0.6s;
 }
