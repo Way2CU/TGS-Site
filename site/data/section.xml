@@ -11,7 +11,10 @@
 		<language name="all" file="team.xml" />
 	</section>
 	<section name="careers">
-		<language name="all" file="careers.xml" />
+		<language name="all">
+			<action name="_default" file="careers.xml"/>
+			<action name="view" file="view.xml"/>
+		</language>
 	</section>
 	<section name="tgs">
 		<language name="all" file="tgs.xml" />
