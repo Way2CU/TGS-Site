@@ -1,0 +1,49 @@
+<document>
+	<article class="job_description">
+		<h2><cms:var param="title" multilanguage="yes"/></h2>
+		<cms:markdown param="content" multilanguage="yes"/>
+	</article>
+
+	<div class="job_form">
+		<div class="social">
+			<p><cms:text constant="title_share"/></p>
+			<a
+				href="'https://plus.google.com/share?url='.urlencode(url_Make('view', 'careers', array('id', $_REQUEST['id'])))" 
+				target="_blank"
+				cms:eval="href"
+				class="google"
+				>
+			</a>
+			<a 
+				href="'https://www.facebook.com/sharer/sharer.php?u='.urlencode(url_Make('view', 'careers', array('id', $_REQUEST['id'])))" 
+				target="_blank"
+				cms:eval="href"
+				class="facebook"
+				>
+			</a>
+			<a 
+				href="'https://www.facebook.com/sharer/sharer.php?u='.urlencode(url_Make('view', 'careers', array('id', $_REQUEST['id'])))" 
+				target="_blank"
+				cms:eval="href"
+				class="facebook"
+				>
+			</a>
+			<a 
+				href="'https://twitter.com/home?status='.urlencode(url_Make('view', 'careers', array('id', $_REQUEST['id'])))" 
+				target="_blank"
+				cms:eval="href"
+				class="tweeter"
+				>
+			</a>
+		</div>
+		<a href="javascript:void(0)">
+			<cms:text constant="button_apply_position"/>
+		</a>
+		<p><cms:text constant="title_job_form"/></p>
+		<cms:module
+			name="contact_form"
+			action="show"
+			text_id="contact_job"
+			/>
+	</div>
+</document>
