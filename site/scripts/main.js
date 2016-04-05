@@ -103,7 +103,17 @@ Site.on_load = function() {
 		Site.menu = new FloatingMenu($('header'),$('section').first().next());
 	}
 
-};
-
+    // function for filtering jobs
+    var filter_checkboxes = $('label.job input');
+    filter_checkboxes.on('change', function() {
+        var id = $(this).attr('id');
+        var jobs = $('article.job_preview[data-id='+id+']');
+        if(this.checked == true) {
+            jobs.removeClass('hidden');
+        } else {
+            jobs.addClass('hidden');
+        }
+    });
+}
 // connect document `load` event with handler function
 $(Site.on_load);
