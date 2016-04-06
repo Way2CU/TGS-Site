@@ -13,6 +13,12 @@
 				cms:eval="href"
 				class="google"
 				>
+				<svg>
+					<use
+						href="#google"
+						xlink:href="site/images/site-sprite.svg#google"
+						/>
+				</svg>
 			</a>
 			<a 
 				href="'https://www.facebook.com/sharer/sharer.php?u='.urlencode(url_Make('view', 'careers', array('id', $_REQUEST['id'])))" 
@@ -20,20 +26,38 @@
 				cms:eval="href"
 				class="facebook"
 				>
+				<svg>
+					<use
+						href="#icon-facebook"
+						xlink:href="site/images/site-sprite.svg#icon-facebook"
+						/>
+				</svg>
 			</a>
 			<a 
-				href="'https://www.facebook.com/sharer/sharer.php?u='.urlencode(url_Make('view', 'careers', array('id', $_REQUEST['id'])))" 
+				href="'https://www.linkedin.com/shareArticle?mini=true&amp;url=&amp;title=&amp;summary=&amp;source='.urlencode(url_Make('view', 'careers', array('id', $_REQUEST['id'])))" 
 				target="_blank"
 				cms:eval="href"
-				class="facebook"
+				class="linkedin"
 				>
+				<svg>
+					<use
+						href="#icon-linkedin"
+						xlink:href="site/images/site-sprite.svg#icon-linkedin"
+						/>
+				</svg>
 			</a>
 			<a 
 				href="'https://twitter.com/home?status='.urlencode(url_Make('view', 'careers', array('id', $_REQUEST['id'])))" 
 				target="_blank"
 				cms:eval="href"
-				class="tweeter"
+				class="twitter"
 				>
+				<svg>
+					<use
+						href="#twitter"
+						xlink:href="site/images/site-sprite.svg#twitter"
+						/>
+				</svg>
 			</a>
 		</div>
 		<a href="javascript:void(0)">
