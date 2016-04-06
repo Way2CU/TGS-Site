@@ -176,7 +176,7 @@ div#intro strong {
 	font-style: normal;
 }
 
-div.job_form a,
+div.job_form > a,
 div#intro a {
 	display: inline-block;
 	text-decoration: none;
@@ -196,22 +196,22 @@ div#intro a {
 	z-index: 0;
 }
 
-div.job_form a {
-	font-size: 1.1rem;
+div.job_form  > a {
+	font-size: 1rem;
 }
 
-div.job_form a:hover,
+div.job_form > a:hover,
 div#intro a:hover {
 	border-color: @color_ac_blue;
 	color: @color_ac_white;
 }
 
-div.job_form a:hover:before,
+div.job_form  > a:hover:before,
 div#intro a:hover:before {
 	left: 0%;
 }
 
-div.job_form a:before,
+div.job_form > a:before,
 div#intro a:before {
 	content: '';
 	position: absolute;
@@ -332,9 +332,11 @@ div#form_wrap fieldset label span {
 }
 
 div#form_wrap fieldset label span {
+	vertical-align: top;
+	padding-top: 5px;
 	text-align: left;
 	color: @color_text;
-	width: 150px;
+	width: 120px;
 }
 
 div.job_form label input,
@@ -702,4 +704,42 @@ div.job_form {
 
 div.job_form p {
 	font-weight: 700;
+}
+
+div.social {
+	display: block;
+	margin-bottom: 15px;
+}
+
+div.social > a,
+div.social p {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+div.social > a {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+div.social > a svg {
+	display: block;
+	width: 35px;
+	height: 35px;
+}
+
+div.social > a.facebook svg {
+	fill: @color_ac_blue;
+}
+
+div.social > a.linkedin svg {
+	fill: lighten(@color_ac_blue, 10%);
+}
+
+div.social > a.twitter svg {
+	fill: lighten(@color_ac_blue, 20%);
+}
+
+div.social > a.google svg {
+	fill: #bc0d1e;
 }
