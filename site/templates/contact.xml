@@ -9,6 +9,7 @@
 				<cms:raw text=" - "/>
 				<cms:text constant="menu_contact"/>
 			</title>
+			<link href='https://fonts.googleapis.com/css?family=Signika:400,700' rel='stylesheet' type='text/css'/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
