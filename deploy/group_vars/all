@@ -1,10 +1,10 @@
 ---
 site:
-  domain: sample.com
+  domain: tgs-systems.com
   # subdomain: test
   make_alias: false
   root: httpdocs
-  username: sample
+  username: tgs-systems
   caracal_branch: develop
   # ip_address: 0.0.0.0
   # owner: Some Person
