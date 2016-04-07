@@ -1,0 +1,9 @@
+<document>
+	<div class="grid-item">
+		<img 
+			src="$params['image']" 
+			alt="$params['title'][$language]" 
+			cms:eval="src,alt"
+			/>
+	</div>
+</document>
