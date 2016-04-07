@@ -60,8 +60,8 @@
 					text_id="map"
 					template="parts/article.xml"
 					/>
-				<!-- container for map-->
-				<div class="map"></div>
+				<cms:template file="parts/map_locations.xml"/>
+
 			</div>
 
 			<!-- Bottom section of the site -->
