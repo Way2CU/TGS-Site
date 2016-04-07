@@ -287,10 +287,38 @@ div#locations span.location {
 	width: 200px;
 	left: -85px;
 	margin-top: 0px;
+	padding: 10px;
+}
+
+[data-tooltip]:hover:after {
+	margin-top: 0px;
+	top: 100%;
 }
 
 [data-tooltip]:before {
 	left: 15px;
+	margin-top: 40px;
+	transform: rotate(180deg);
+	top: 100%;
+}
+
+[data-tooltip]:hover:before {
+	display: block;
+	width: 0px;
+	height: 0px;
+	opacity: 1;
+	visibility: visible;
+	position: absolute;
+	top: 100%;
+	margin-top: 40px;
+	border: 6px solid transparent;
+	border-bottom-color: rgba(50, 50, 50, 0.9);
+	content: '';
+	font-size: 0px;
+	z-index: 10000;
+	transition-delay: 0.5s;
+	transition-duration: 0.2s;
+	transition-property: all;
 }
 
 // contact form 
