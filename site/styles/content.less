@@ -267,9 +267,30 @@ div#locations div.map {
 	margin-right: auto;
 	width: 953px;
 	height: 480px;
-	background-image: url(../images/map.jpg);
+	background-image: url(../images/map.svg);
 	background-repeat: no-repeat;
 	background-position: center center;
+	position: relative;
+}
+
+div#locations span.location {
+	display: inline-block;
+	background-image: url(../images/location-pin.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 30px 30px;
+	width: 30px;
+	height: 30px;
+}
+
+[data-tooltip]:after {
+	width: 200px;
+	left: -85px;
+	margin-top: 0px;
+}
+
+[data-tooltip]:before {
+	left: 15px;
 }
 
 // contact form 
