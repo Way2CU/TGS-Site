@@ -10,6 +10,9 @@
 				<cms:text constant="menu_tgs"/>
 			</title>
 			<link href='https://fonts.googleapis.com/css?family=Signika:400,700' rel='stylesheet' type='text/css'/>
+			<cms:script src="_BASEURL.'/site/scripts/jquery.jMosaic.js'" cms:eval="src"/>
+			<cms:script src="_BASEURL.'/site/scripts/mosaic_gallery.js'" cms:eval="src"/>
+			<cms:link rel="stylesheet" href="_BASEURL.'/site/styles/jquery.jMosaic.css'" cms:eval="href"/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
@@ -17,8 +20,7 @@
 			<!-- Top section of the site -->
 			<cms:template file="parts/header.xml"/>
 
-			<div class="grid">
-				<div class="grid-sizer"></div>
+			<div class="pictures" >
 				<cms:module
 					name="gallery"
 					action="show_image_list"
