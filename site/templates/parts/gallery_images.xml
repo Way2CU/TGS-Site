@@ -1,9 +1,8 @@
 <document>
-	<div class="grid-item">
 		<img 
+			class="mosaicflow__item"
 			src="$params['image']" 
 			alt="$params['title'][$language]" 
 			cms:eval="src,alt"
 			/>
-	</div>
 </document>
