@@ -53,7 +53,7 @@ function Tween(target, start_value, end_value, duration) {
 $(function() {
 	var self_window = $(window);
 	var is_position = true;
-	var position = $('div#features').offset().top - 400;
+	var position = $('div#features').offset().top - 800;
 	var features_links = $('div#features li.stock.feature');
 
 	self_window.scroll(function (event) {
