@@ -97,7 +97,7 @@ Site.on_load = function() {
 		Site.mobile_menu = new Caracal.MobileMenu();
 
 	// create floating menu object
-	if($('div#intro').length > 0 || $('div.pictures jMosaic-selector'.length > 0)) {
+	if($('div#intro').length > 0 || $('div.pictures').length > 0) {
 		Site.menu = new FloatingMenu($('header'),$('header'));
 	} else {
 		Site.menu = new FloatingMenu($('header'),$('section').first().next());
