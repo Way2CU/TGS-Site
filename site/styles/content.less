@@ -764,20 +764,37 @@ div.social > a svg {
 	display: block;
 	width: 35px;
 	height: 35px;
+	transition: all 0.3s;
 }
 
 div.social > a.facebook svg {
 	fill: @color_ac_blue;
 }
 
+div.social > a.facebook:hover svg {
+	fill: lighten(@color_ac_blue, 10%)
+}
+
 div.social > a.linkedin svg {
 	fill: lighten(@color_ac_blue, 10%);
+}
+
+div.social > a.linkedin:hover svg {
+	fill: darken(@color_ac_blue, 10%)
 }
 
 div.social > a.twitter svg {
 	fill: lighten(@color_ac_blue, 20%);
 }
 
+div.social > a.twitter:hover svg {
+	fill: lighten(@color_ac_blue, 10%)
+}
+
 div.social > a.google svg {
 	fill: #bc0d1e;
+}
+
+div.social > a.google:hover svg {
+	fill: lighten(#bc0d1e, 10%);
 }
