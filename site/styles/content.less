@@ -66,21 +66,6 @@ section article.about {
 	background-position: center left;
 }
 
-section.timeline_wrapper {
-	position: relative;
-}
-
-section.timeline_wrapper:before {
-	content: "";
-	position: absolute;
-	top: 0px;
-	left: 50%;
-	margin-left: -2.5px;
-	height: 100%;
-	width: 5px;
-	background-color: lighten(@color_ac_grey, 40%);
-}
-
 section article.about h2 {
 	text-align: left;
 }
@@ -822,27 +807,36 @@ div.social > a.google:hover svg {
 ul#timeline {
 	text-align: left;
 	margin: 0px;
-	margin-left: auto;
-	margin-right: auto;
-	width: 900px;
+	width: 100%;
 	padding: 0px;
 	list-style-type: none;
+	position: relative;
+}
+
+ul#timeline:before {
+	content: "";
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	margin-left: -2.5px;
+	height: 100%;
+	width: 5px;
+	background-color: lighten(@color_ac_grey, 40%);
 }
 
 ul#timeline li {
 	display: block;
+	margin-bottom: 40px;
 	position: relative;
 	text-align: right;
-	width: 450px;
-	height: 100px;
+	width: 50%;
 }
 
 ul#timeline li:nth-child(even) {
 	direction: rtl;
 	text-align: left;
-	left: 450px;
+	left: 50%;
 }
-
 
 ul#timeline li div,
 ul#timeline li span,
@@ -855,6 +849,7 @@ ul#timeline li img {
 ul#timeline li div {
 	display: inline-block;
 	vertical-align: middle;
+	margin-right: 50px;
 	text-align: left;
 	padding-left: 10px;
 	padding-right: 10px;
@@ -863,11 +858,33 @@ ul#timeline li div {
 	height: 90px;
 }
 
+ul#timeline li:nth-child(even) div {
+	margin-left: 50px;
+	margin-right: 0px;
+}
+
 ul#timeline li div:before {
 	content: "";
 	display: inline-block;
 	vertical-align: middle;
 	height: 100%;
+}
+
+ul#timeline li div:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	margin-top: -2px;
+	right: 60px;
+	background-color: @color_ac_blue;
+	border-radius: 50%;
+	width: 4px;
+	height: 4px;
+}
+
+ul#timeline li:nth-child(even) div:after {
+	right: auto;
+	left: 60px;
 }
 
 ul#timeline li p {
@@ -896,14 +913,15 @@ ul#timeline li:nth-child(even) p:after {
 
 ul#timeline li span {
 	position: relative;
-	left: 70px;
+	left: 50px;
 	color: @color_ac_grey;
 }
 
 ul#timeline li span:before {
 	content: "";
 	position: absolute;
-	right: 63px;
+	top: 3px;
+	right: 43px;
 	width: 10px;
 	height: 10px;
 	background-color: @color_ac_blue;
@@ -913,11 +931,27 @@ ul#timeline li span:before {
 }
 
 ul#timeline li:nth-child(even) span:before {
-	right: -43px;
+	right: -23px;
 }
 
 ul#timeline li:nth-child(even) span {
-	right: 70px;
+	right: 50px;
+}
+
+ul#timeline li span:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	margin-top: -0.5px;
+	right: calc(~'(100% + 23px)');
+	width: 55px;
+	height: 1px;
+	background-color: @color_ac_blue;
+}
+
+ul#timeline li:nth-child(even) span:after {
+	right: auto;
+	left: calc(~'(100% + 23px)');
 }
 
 ul#timeline li img {
