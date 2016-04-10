@@ -829,7 +829,13 @@ ul#timeline li {
 	margin-bottom: 40px;
 	position: relative;
 	text-align: right;
+	opacity: 0;
 	width: 50%;
+	transition: all 0.5s;
+}
+
+ul#timeline li.active {
+	opacity: 1;
 }
 
 ul#timeline li:nth-child(even) {
@@ -899,15 +905,27 @@ ul#timeline li p:after {
 	position: absolute;
 	top: 50%;
 	margin-top: -10px;
-	left: 97%;
+	left: 90%;
 	width: 20px;
 	height: 20px;
 	background-color: @color_ac_blue;
 	transform: rotate(45deg);
 	z-index: -1;
+	transition: all 0.3s;
+	transition-delay: 0.6s;
+}
+
+ul#timeline li.active p:after {
+	left: 97%;
 }
 
 ul#timeline li:nth-child(even) p:after {
+	right: 90%;
+	transition: all 0.3s;
+	transition-delay: 0.6s;
+}
+
+ul#timeline li.active:nth-child(even) p:after {
 	right: 97%;
 }
 
@@ -944,9 +962,15 @@ ul#timeline li span:after {
 	top: 50%;
 	margin-top: -0.5px;
 	right: calc(~'(100% + 23px)');
-	width: 55px;
+	width: 0px;
 	height: 1px;
 	background-color: @color_ac_blue;
+	transition: all 0.3s;
+	transition-delay: 0.3s;
+}
+
+ul#timeline li.active span:after {
+	width: 55px;
 }
 
 ul#timeline li:nth-child(even) span:after {
