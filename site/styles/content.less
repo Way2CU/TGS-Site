@@ -66,6 +66,21 @@ section article.about {
 	background-position: center left;
 }
 
+section.timeline_wrapper {
+	position: relative;
+}
+
+section.timeline_wrapper:before {
+	content: "";
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	margin-left: -2.5px;
+	height: 100%;
+	width: 5px;
+	background-color: lighten(@color_ac_grey, 40%);
+}
+
 section article.about h2 {
 	text-align: left;
 }
@@ -798,4 +813,114 @@ div.social > a.google svg {
 
 div.social > a.google:hover svg {
 	fill: lighten(#bc0d1e, 10%);
+}
+
+/**
+ * Timeline list
+ */
+
+ul#timeline {
+	text-align: left;
+	margin: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 900px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+ul#timeline li {
+	display: block;
+	position: relative;
+	text-align: right;
+	width: 450px;
+	height: 100px;
+}
+
+ul#timeline li:nth-child(even) {
+	direction: rtl;
+	text-align: left;
+	left: 450px;
+}
+
+
+ul#timeline li div,
+ul#timeline li span,
+ul#timeline li p,
+ul#timeline li img {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+ul#timeline li div {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: @color_ac_blue;
+	border-radius: @border-radius;
+	height: 90px;
+}
+
+ul#timeline li div:before {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+}
+
+ul#timeline li p {
+	margin: 0px;
+	color: @color_ac_white;
+	width: 200px;
+	position: relative;
+}
+
+ul#timeline li p:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	margin-top: -10px;
+	left: 97%;
+	width: 20px;
+	height: 20px;
+	background-color: @color_ac_blue;
+	transform: rotate(45deg);
+	z-index: -1;
+}
+
+ul#timeline li:nth-child(even) p:after {
+	right: 97%;
+}
+
+ul#timeline li span {
+	position: relative;
+	left: 70px;
+	color: @color_ac_grey;
+}
+
+ul#timeline li span:before {
+	content: "";
+	position: absolute;
+	right: 63px;
+	width: 10px;
+	height: 10px;
+	background-color: @color_ac_blue;
+	border: 2px solid @color_ac_white;
+	box-shadow: 0px 0px 0px 1px @color_ac_blue;
+	border-radius: 50%;
+}
+
+ul#timeline li:nth-child(even) span:before {
+	right: -43px;
+}
+
+ul#timeline li:nth-child(even) span {
+	right: 70px;
+}
+
+ul#timeline li img {
+	margin-left: 10px;
+	margin-right: 10px;
 }

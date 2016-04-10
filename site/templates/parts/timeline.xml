@@ -1,0 +1,13 @@
+<document>
+	<li>
+		<img 
+			src="$params['image']" 
+			alt="$params['title'][$language]"
+			cms:eval="src,alt"
+			/>
+		<div>
+			<cms:markdown param="description" multilanguage="yes"/>
+		</div>
+		<span><cms:var param="title" multilanguage="yes"/></span>
+	</li>
+</document>

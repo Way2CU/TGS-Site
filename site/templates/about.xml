@@ -33,6 +33,17 @@
 						/>
 				</section>
 
+				<section class="timeline_wrapper">
+					<ul id="timeline">
+						<cms:module
+							name="gallery"
+							action="show_image_list"
+							group="timeline"
+							template="parts/timeline.xml"
+							/>
+					</ul>
+				</section>
+
 				<section class="grey">
 					<h2><cms:text constant="title_brands"/></h2>
 					<cms:module
