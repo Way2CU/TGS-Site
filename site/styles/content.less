@@ -391,12 +391,17 @@ div.job_form label textarea {
 	width: calc(~'(100% - 40px)');
 }
 
+div.job_form label input:hover,
+div.job_form label textarea:hover,
+div#form_wrap fieldset label textarea:hover,
+div#form_wrap fieldset label input:hover {
+	border: 2px solid lighten(@color_ac_blue, 20%);
+}
+
 div.job_form label input:focus,
 div.job_form label textarea:focus,
 div#form_wrap fieldset label textarea:focus,
-div#form_wrap fieldset label input:focus,
-div#form_wrap fieldset label textarea:hover,
-div#form_wrap fieldset label input:hover {
+div#form_wrap fieldset label input:focus {
 	border: 2px solid @color_ac_blue;
 }
 
