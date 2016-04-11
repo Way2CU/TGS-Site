@@ -307,6 +307,7 @@ div#locations span.location {
 }
 
 // contact form 
+
 div#form_wrap {
 	padding: 50px calc(~'(100% - 1200px)'/ 2);
 }
@@ -318,44 +319,46 @@ div#form_wrap fieldset {
 	width: 45%;
 }
 
-div.job_form label,
+div.fixed_form label,
 div#form_wrap fieldset label {
 	display: block;
 	margin-bottom: 15px;
-}
-
-div.job_form label {
 	position: relative;
 }
 
-div.job_form label:before {
+div.fixed_form label:before {
 	content: "";
 	position: absolute;
 	top: 50%;
 	margin-top: -15px;
-	left: 5px;
+	left: 20px;
 	background-image: url(../images/icon-sprite.svg);
 	background-repeat: no-repeat;
-	background-position: 0px 0px;
 	background-size: 420px 30px;
 	width: 30px;
 	height: 30px;
 }
 
-div.job_form label:nth-of-type(4):before {
-	top: 20px;
+div.fixed_form label:nth-of-type(1):before {
+	background-position: 0px 0px;
 }
 
-div.job_form label:nth-of-type(2):before {
+div.fixed_form label:nth-of-type(2):before {
 	background-position: -30px 0px;
 }
 
-div.job_form label:nth-of-type(3):before {
+div.fixed_form label:nth-of-type(3):before {
 	background-position: -60px 0px;
 }
 
-div.job_form label:nth-of-type(4):before {
+div.fixed_form label:nth-of-type(4):before {
+	top: 10px;
+	margin-top: 0px;
 	background-position: -360px 0px;
+}
+
+div.fixed_form label:last-of-type:before {
+	background-image: none;
 }
 
 div#form_wrap fieldset label textarea,
@@ -363,6 +366,10 @@ div#form_wrap fieldset label input,
 div#form_wrap fieldset label span {
 	display: inline-block;
 	vertical-align: middle;
+}
+
+div.fixed_form label textarea {
+	resize: vertical;
 }
 
 div#form_wrap fieldset label span {
@@ -373,8 +380,13 @@ div#form_wrap fieldset label span {
 	width: 120px;
 }
 
-div.job_form label input,
-div.job_form label textarea,
+div.fixed_form label span {
+	display: block;
+	padding-bottom: 10px;
+}
+
+div.fixed_form label textarea,
+div.fixed_form label input,
 div#form_wrap fieldset label textarea,
 div#form_wrap fieldset label input {
 	padding-left: 5px;
@@ -385,37 +397,37 @@ div#form_wrap fieldset label input {
 	transition: all 0.3s;
 }
 
-div.job_form label input,
-div.job_form label textarea {
-	padding-left: 40px;
-	width: calc(~'(100% - 40px)');
+div.fixed_form label textarea,
+div.fixed_form label input {
+	padding-left: 50px;
+	width: calc(~'(90% - 50px)');
+	border-color: @color_ac_bright_grey;
 }
 
-div.job_form label input:hover,
-div.job_form label textarea:hover,
+div.fixed_form label textarea:hover,
+div.fixed_form label input:hover,
 div#form_wrap fieldset label textarea:hover,
 div#form_wrap fieldset label input:hover {
 	border: 2px solid lighten(@color_ac_blue, 20%);
 }
 
-div.job_form label input:focus,
-div.job_form label textarea:focus,
+div.fixed_form label textarea:focus,
+div.fixed_form label input:focus,
 div#form_wrap fieldset label textarea:focus,
 div#form_wrap fieldset label input:focus {
 	border: 2px solid @color_ac_blue;
 }
 
-div.job_form label textarea,
 div#form_wrap fieldset label textarea {
 	resize: vertical;
 }
 
-div.job_form div.controls,
+div.fixed_form div.controls,
 div#form_wrap div.controls {
 	text-align: center;
 }
 
-div.job_form div.controls button,
+div.fixed_form div.controls button,
 div#form_wrap div.controls button {
 	display: inline-block;
 	padding-top: 13px;
@@ -433,12 +445,12 @@ div#form_wrap div.controls button {
 	z-index: 0;
 }
 
-div.job_form div.controls button:hover:before,
+div.fixed_form div.controls button:hover:before,
 div#form_wrap div.controls button:hover:before {
 	left: 0%;
 }
 
-div.job_form div.controls button:before,
+div.fixed_form div.controls button:before,
 div#form_wrap div.controls button:before {
 	content: "";
 	position: absolute;
@@ -451,7 +463,7 @@ div#form_wrap div.controls button:before {
 	z-index: -1;
 }
 
-div.job_form div.controls button:hover,
+div.fixed_form div.controls button:hover,
 div#form_wrap div.controls button:hover {
 	color: @color_ac_white;
 }
@@ -798,6 +810,32 @@ div.social > a.google svg {
 
 div.social > a.google:hover svg {
 	fill: lighten(#bc0d1e, 10%);
+}
+
+div.fixed_form {
+	max-height: 0px;
+	width: 100%;
+	margin-top: 15px;
+	padding-bottom: 0px;
+	border-radius: @border-radius;
+	box-shadow: 0px 0px 8px fade(@color_ac_grey, 50%);
+	overflow: hidden;
+}
+
+div.fixed_form h2 {
+	margin: 0px;
+	background-color: @color_ac_blue;
+	color: @color_ac_white;
+	font-size: 2em;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+div.fixed_form p {
+	color: @color_ac_blue;
+	font-size: 1.5em;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 /**

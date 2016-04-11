@@ -63,11 +63,15 @@
 		<a href="javascript:void(0)">
 			<cms:text constant="button_apply_position"/>
 		</a>
-		<p><cms:text constant="title_job_form"/></p>
-		<cms:module
-			name="contact_form"
-			action="show"
-			text_id="contact_job"
-			/>
+
+		<div class="fixed_form">
+			<h2><cms:text constant="button_apply_position"/></h2>
+			<p><cms:var param="title" multilanguage="yes"/></p>
+			<cms:module
+				name="contact_form"
+				action="show"
+				text_id="contact_job"
+				/>
+		</div>
 	</div>
 </document>
