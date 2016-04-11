@@ -60,7 +60,7 @@
 				</svg>
 			</a>
 		</div>
-		<a href="javascript:void(0)">
+		<a href="javascript:void(0)" class="button_apply">
 			<cms:text constant="button_apply_position"/>
 		</a>
 

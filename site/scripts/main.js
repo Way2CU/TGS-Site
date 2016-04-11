@@ -114,6 +114,11 @@ Site.on_load = function() {
             jobs.addClass('hidden');
         }
     });
+
+    // function for showing job form
+    $('a.button_apply').on('click', function() {
+        $('div.fixed_form').toggleClass('visible');
+    })
 }
 // connect document `load` event with handler function
 $(Site.on_load);
