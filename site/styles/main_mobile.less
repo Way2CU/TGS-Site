@@ -1,0 +1,44 @@
+/**
+ * Main Style Sheet
+ * TGS Site
+ *
+ * Copyright (c) 2015. by Way2CU, http://way2cu.com
+ * Authors: Tal Reznic
+ */
+
+@color_ac_blue: #0066ac;
+@color_ac_grey: #7f8c8d;
+@color_ac_bright_grey: #f7f7f7;
+@color_ac_white: white;
+@color_text: #231f20;
+@border-radius: 10px;
+
+@import "header_mobile.less";
+@import "content_mobile.less";
+@import "footer_mobile.less";
+
+@import (css) "stock/header.css";
+@import (css) "stock/copyright.css";
+
+body {
+	background-color: white;
+	color: @color_text;
+	font-family: 'Signika', sans-serif;
+}
+input,
+select,
+textarea,
+button {
+	font-family: 'Signika', sans-serif;
+	font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: Serif;
+	font-weight: 700;
+	color: @color_ac_blue;
+}
