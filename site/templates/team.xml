@@ -25,14 +25,19 @@
 					/>
 
 				<section>
-					<ul id="team">
-						<cms:module
-							name="gallery"
-							action="show_group_list"
-							container="team"
-							template="parts/team_members_list.xml"
-							/>
-					</ul>
+					<cms:module
+						name="gallery"
+						action="show_container"
+						text_id="managment"
+						template="parts/gallery_group.xml"
+						/>
+
+					<cms:module
+						name="gallery"
+						action="show_container"
+						text_id="team"
+						template="parts/gallery_group.xml"
+						/>
 				</section>
 
 			<!-- Bottom section of the site -->

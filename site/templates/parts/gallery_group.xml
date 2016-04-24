@@ -1,0 +1,13 @@
+<document>
+	<h2><cms:var param="name" multilanguage="yes"/></h2>
+
+	<ul class="team ">
+		<cms:module
+			name="gallery"
+			action="show_group_list"
+			container_id="$params['id']"
+			template="parts/team_members_list.xml"
+			cms:eval="container_id"
+			/>
+	</ul>
+</document>

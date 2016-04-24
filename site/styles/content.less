@@ -529,13 +529,12 @@ section a.brand img {
 	transition: all 0.3s;
 }
 
-ul#team {
-	margin: 0px;
+ul.team {
 	padding: 0px;
 	list-style-type: none;
 }
 
-ul#team li {
+ul.team li {
 	display: inline-block;
 	vertical-align: top;
 	padding-top: 195px;
@@ -543,25 +542,44 @@ ul#team li {
 	position: relative;
 }
 
-ul#team li:hover p {
+ul.team li:hover p {
 	color: @color_ac_blue;
 }
 
-ul#team li p.name {
+ul.team li a {
+	position: absolute;
+	top: 160px;
+	right: 110px;
+	width: 35px;
+	height: 35px;
+	background-image: url(../images/linkedin-letter.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 70px 10px;
+	background-color: @color_ac_blue;
+	border-radius: 50%;
+	transition: all 0.3s;
+}
+
+ul.team li:hover a {
+	background-color: lighten(@color_ac_blue, 10%);
+}
+
+ul.team li p.name {
 	font-weight: 700;
 	font-size: 1.2em;
 	transition: all 0.3s;
 }
 
-ul#team li:hover img.regular {
+ul.team li:hover img.regular {
 	transform:scale(0);
 }
 
-ul#team li:hover img.animated {
+ul.team li:hover img.animated {
 	transform:scale(1);
 }
 
-ul#team li img {
+ul.team li img {
 	position: absolute;
 	top: 0px;
 	left: 50%;
@@ -571,12 +589,12 @@ ul#team li img {
 	border-radius: 50%;
 }
 
-ul#team li img.regular {
+ul.team li img.regular {
 	transform:scale(1);
 	transition: all 0.6s;
 }
 
-ul#team li img.animated {
+ul.team li img.animated {
 	transform:scale(0);
 	transition: all 0.6s;
 }
