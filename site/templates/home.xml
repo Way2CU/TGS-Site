@@ -23,7 +23,21 @@
 					/>
 			</div>
 
-			<div id="video">
+			<div id="features">
+				<ul>
+					<cms:module
+						name="articles"
+						action="show_list"
+						group="features"
+						template="stock/features_generic.xml"
+						>
+						<param name="title" value=""/>
+						<param name="sprite" value="site/images/site-sprite.svg"/>
+					</cms:module>
+				</ul>
+			</div>
+
+ 			<div id="video">
 				<cms:module
 					name="articles"
 					action="show"
@@ -37,20 +51,6 @@
 					text_id="tgs_video"
 					template="parts/video.xml"
 					/>
-			</div>
-
-			<div id="features">
-				<ul>
-					<cms:module
-						name="articles"
-						action="show_list"
-						group="features"
-						template="stock/features_generic.xml"
-						>
-						<param name="title" value=""/>
-						<param name="sprite" value="site/images/site-sprite.svg"/>
-					</cms:module>
-				</ul>
 			</div>
 
 			<div id="locations">
