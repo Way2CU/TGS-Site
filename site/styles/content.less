@@ -563,7 +563,7 @@ ul.team li:hover p {
 ul.team li a {
 	position: absolute;
 	top: 160px;
-	right: 45px;
+	right: 55px;
 	width: 35px;
 	height: 35px;
 	background-image: url(../images/linkedin-letter.svg);
@@ -585,14 +585,6 @@ ul.team li p.name {
 	transition: all 0.3s;
 }
 
-ul.team li:hover img.regular {
-	transform:scale(0);
-}
-
-ul.team li:hover img.animated {
-	transform:scale(1);
-}
-
 ul.team li img {
 	position: absolute;
 	top: 0px;
@@ -601,16 +593,20 @@ ul.team li img {
 	width: 195px;
 	height: 195px;
 	border-radius: 50%;
+	opacity: 1;
+	transition: all 0.5s;
 }
 
 ul.team li img.regular {
-	transform:scale(1);
-	transition: all 0.6s;
+	z-index: 10;
 }
 
 ul.team li img.animated {
-	transform:scale(0);
-	transition: all 0.6s;
+	z-index: 0;
+}
+
+ul.team li img.regular:hover {
+	opacity: 0;
 }
 
 label.job {
