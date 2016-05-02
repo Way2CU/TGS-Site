@@ -15,7 +15,7 @@ footer {
 
 footer div.information {
 	display: block;
-	padding: 30px calc(~'(100% - 1200px)'/ 2);
+	padding: 40px calc(~'(100% - 1200px)'/ 2);
 	background: linear-gradient(to bottom, #0066ac 0%,#004466 100%);
 }
 
@@ -28,42 +28,14 @@ footer div.information ul {
 	list-style-type: none;
 }
 
-footer div.information ul.information {
-	width: 80%;
-}
-
-footer div.information ul.social {
+footer div.information ul li{
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
 	width: 20%;
 }
 
-footer div.information ul.social li {
-	display: inline-block;
-	vertical-align: top;
-	width: 45%;
-}
-
-footer div.information ul.social li a {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	text-decoration: none;
-}
-
-footer div.information ul.social li a p {
-	text-align: center;
-}
-
-footer div.information ul.information li {
-	display: inline-block;
-	vertical-align: top;
-	text-align: center;
-}
-
-footer div.information ul.information li {
-	width: 33.3%;
-}
-
-footer div.information ul.information li a {
+footer div.information ul li a {
 	display: inline-block;
 	text-decoration: none;
 	color: @color_ac_white;
@@ -86,10 +58,10 @@ footer div.information ul li a svg {
 	transition: all 0.3s;
 }
 
-footer div.information ul.information li a p {
+footer div.information ul li a p {
 	margin-bottom: 0px;
-	padding-left: 40px;
-	padding-right: 40px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 footer div.copyright {

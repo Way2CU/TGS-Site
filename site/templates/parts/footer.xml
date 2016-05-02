@@ -11,9 +11,7 @@
 					<param name="title" value=""/>
 					<param name="sprite" value="site/images/site-sprite.svg"/>
 				</cms:module>
-			</ul>
 
-			<ul class="social">
 				<cms:module
 					name="links"
 					action="show_link_list"
