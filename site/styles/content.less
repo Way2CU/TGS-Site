@@ -14,7 +14,7 @@
 div#intro {
 	display: block;
 	margin-top: 80px;
-	padding: 95px calc(~'(100% - 1280px)'/ 2);
+	padding: 88px calc(~'(100% - 1280px)'/ 2);
 	background-image: url(../images/header-background.jpg);
 	background-repeat: no-repeat;
 	background-position: center top;
@@ -46,7 +46,7 @@ div#video {
 	min-height: auto;
 	text-align: center;
 	background-image: none;
-	padding: 50px calc(~'(100% - 1280px)'/ 2);
+	padding: 40px calc(~'(100% - 1280px)'/ 2);
 	position: relative;
 }
 
@@ -136,7 +136,7 @@ section.white div.content h1 {
 
 div#features,
 div#locations {
-	padding: 50px calc(~'(100% - 1200px)'/ 2);
+	padding: 40px calc(~'(100% - 1200px)'/ 2);
 }
 
 div#locations {
@@ -259,7 +259,12 @@ div#features ul li {
 	display: inline-block;
 	vertical-align: top;
 	width: calc(25% - 2px);
-	min-height: 200px;
+	min-height: 240px;
+	border-right: 1px solid @color_ac_blue;
+}
+
+div#features ul li:last-of-type {
+	border-right: none;
 }
 
 div#features ul li svg {
@@ -288,7 +293,6 @@ div#features ul li p {
 	min-height: 65px;
 	color: @color_ac_blue;
 	font-size: 1.2em;
-	border-right: 1px solid @color_ac_blue;
 }
 
 div#features ul li:last-of-type p {
