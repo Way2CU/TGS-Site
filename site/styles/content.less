@@ -200,6 +200,7 @@ div#intro strong {
 	font-style: normal;
 }
 
+div.dialog div.command_bar a,
 div.job_form > a,
 div#intro a {
 	display: inline-block;
@@ -220,21 +221,34 @@ div#intro a {
 	z-index: 0;
 }
 
+div.dialog div.command_bar a {
+	font-size: 1em;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
 div.job_form  > a {
 	font-size: 1rem;
 }
 
+div.dialog div.command_bar a:hover,
 div.job_form > a:hover,
 div#intro a:hover {
 	border-color: @color_ac_blue;
 	color: @color_ac_white;
 }
 
+div.dialog div.command_bar a:hover {
+	background-color: @color_ac_white;
+}
+
+div.dialog div.command_bar a:hover:before,
 div.job_form  > a:hover:before,
 div#intro a:hover:before {
 	left: 0%;
 }
 
+div.dialog div.command_bar a:before,
 div.job_form > a:before,
 div#intro a:before {
 	content: '';
@@ -366,6 +380,9 @@ div#form_wrap fieldset {
 div.fixed_form label,
 div#form_wrap fieldset label {
 	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%;
 	margin-bottom: 15px;
 	position: relative;
 }
@@ -444,7 +461,7 @@ div#form_wrap fieldset label input {
 div.fixed_form label textarea,
 div.fixed_form label input {
 	padding-left: 50px;
-	width: calc(~'(90% - 50px)');
+	width: calc(~'(100% - 50px)');
 	border-color: @color_ac_bright_grey;
 }
 
@@ -873,12 +890,11 @@ div.social > a.google:hover svg {
 }
 
 div.fixed_form {
-	max-height: 0px;
-	width: 100%;
-	margin-top: 15px;
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
 	padding-bottom: 0px;
 	border-radius: @border-radius;
-	box-shadow: 0px 0px 8px fade(@color_ac_grey, 50%);
 	overflow: hidden;
 	transition: all 0.5s;
 }
@@ -1086,3 +1102,9 @@ ul#timeline li img {
 	margin-left: 10px;
 	margin-right: 10px;
 }
+
+div.dialog div.title {
+	background-color: @color_ac_blue;
+	text-align: center;
+}
+

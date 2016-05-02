@@ -65,7 +65,6 @@
 		</a>
 
 		<div class="fixed_form">
-			<h2><cms:text constant="button_apply_position"/></h2>
 			<p><cms:var param="title" multilanguage="yes"/></p>
 			<cms:module
 				name="contact_form"

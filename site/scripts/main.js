@@ -50,43 +50,43 @@ Site.is_mobile = function() {
  * @param object trigger_element    jQuery object
  */
 function FloatingMenu(menu, trigger_element) {
-    var self = this;
+	var self = this;
 
-    self.menu = menu;
-    self.position = trigger_element.offset().top;
-    self.active = false;
-      
-    /**
-     * Object initialization.
-     */
-    self._init = function() {
-        // connect signals
-        $(window).on('scroll', self.handle_scroll);
+	self.menu = menu;
+	self.position = trigger_element.offset().top;
+	self.active = false;
+	  
+	/**
+	 * Object initialization.
+	 */
+	self._init = function() {
+		// connect signals
+		$(window).on('scroll', self.handle_scroll);
 
-        // set initial state
-        self.handle_scroll(null);
-    };
-    
-    /**
-     * Handle window scroll.
-     *
-     * @param object event
-     */
-    self.handle_scroll = function(event) {
-        var over_position = $(window).scrollTop() >= self.position;
-        
-        if (over_position && !self.active) {
-            self.menu.addClass('active');
-            self.active = true;
+		// set initial state
+		self.handle_scroll(null);
+	};
+	
+	/**
+	 * Handle window scroll.
+	 *
+	 * @param object event
+	 */
+	self.handle_scroll = function(event) {
+		var over_position = $(window).scrollTop() >= self.position;
+		
+		if (over_position && !self.active) {
+			self.menu.addClass('active');
+			self.active = true;
 
-        } else if (!over_position && self.active) {
-            self.menu.removeClass('active');
-            self.active = false;
-        }
-    };
+		} else if (!over_position && self.active) {
+			self.menu.removeClass('active');
+			self.active = false;
+		}
+	};
 
-    // finalize object
-    self._init();
+	// finalize object
+	self._init();
 }
 
 /**
@@ -103,22 +103,40 @@ Site.on_load = function() {
 		Site.menu = new FloatingMenu($('header'),$('section').first().next());
 	}
 
-    // function for filtering jobs
-    var filter_checkboxes = $('label.job input');
-    filter_checkboxes.on('change', function() {
-        var id = $(this).attr('id');
-        var jobs = $('article.job_preview[data-id='+id+']');
-        if(this.checked == true) {
-            jobs.removeClass('hidden');
-        } else {
-            jobs.addClass('hidden');
-        }
-    });
+	// function for filtering jobs
+	var filter_checkboxes = $('label.job input');
+	filter_checkboxes.on('change', function() {
+		var id = $(this).attr('id');
+		var jobs = $('article.job_preview[data-id='+id+']');
+		if(this.checked == true) {
+			jobs.removeClass('hidden');
+		} else {
+			jobs.addClass('hidden');
+		}
+	});
 
-    // function for showing job form
-    $('a.button_apply').on('click', function() {
-        $('div.fixed_form').toggleClass('visible');
-    })
+	// create dialog for job form
+	Site.dialog  = new Dialog();
+	Site.dialog
+		.setSize(500,500)
+		.setTitle(language_handler.getText(null, 'button_apply_position'))
+		.setContentFromDOM('div.fixed_form');
+
+	var submit_button = $('<a>');
+	submit_button
+		.attr('href', 'javascript:void(0)')
+		.html(language_handler.getText(null, 'send'))
+		.on('click', function(event) {
+			event.preventDefault();
+			Site.dialog.hide();
+			Site.dialog._container.find('form').submit();
+		});
+	Site.dialog.addControl(submit_button);
+
+	 //function for showing job form
+	 $('a.button_apply').on('click', function() {
+	 	Site.dialog.show();
+	});
 }
 // connect document `load` event with handler function
 $(Site.on_load);
