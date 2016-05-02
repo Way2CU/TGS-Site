@@ -1,16 +1,35 @@
 <document>
-	<div class="video_wrap">
-		<cms:module
-			name="youtube"
-			action="show"
-			id="$params['id']"
-			embed="1"
-			width="800"
-			height="483"
-			enable_api="1"
-			allowfullscreen="true"
-			frameborder="0"
-			cms:eval="id"
-		/>	
-	</div>
+	<cms:desktop>
+		<div class="video_wrap">
+			<cms:module
+				name="youtube"
+				action="show"
+				id="$params['id']"
+				embed="1"
+				width="800"
+				height="483"
+				enable_api="1"
+				allowfullscreen="true"
+				frameborder="0"
+				cms:eval="id"
+			/>	
+		</div>
+	</cms:desktop>
+
+	<cms:mobile>
+		<div class="video_wrap">
+			<cms:module
+				name="youtube"
+				action="show"
+				id="$params['id']"
+				embed="1"
+				width="280"
+				height="221"
+				enable_api="1"
+				allowfullscreen="true"
+				frameborder="0"
+				cms:eval="id"
+			/>	
+		</div>
+	</cms:mobile>
 </document>

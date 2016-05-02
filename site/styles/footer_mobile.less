@@ -1,0 +1,82 @@
+/**
+ * Footer mobile Style Sheet
+ * TGS Site
+ *
+ * Copyright (c) 2015. by Way2CU, http://way2cu.com
+ * Authors:Tal Reznic
+ */
+
+footer {
+	display: block;
+	text-align: center;
+	background-color: @color_text;
+	color: @color_ac_white;
+}
+
+footer div.information {
+	display: block;
+	background: linear-gradient(to bottom, #0066ac 0%,#004466 100%);
+	overflow: hidden;
+}
+
+footer div.information ul {
+	display: block;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+footer div.information ul li {
+	display: block;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-left: 15px;
+	margin-right: 15px;
+	text-align: center;
+	border-bottom: 1px solid fade(@color_ac_white, 20%);
+}
+
+footer div.information ul li a {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-decoration: none;
+}
+
+footer div.information ul li a p {
+	margin: 0px;
+	padding-left: 40px;
+	padding-right: 40px;
+	text-align: center;
+}
+
+footer div.information ul li a:hover svg {
+	fill: fade(@color_ac_white, 80%);
+}
+
+footer div.information ul li a:hover {
+	color: fade(@color_ac_white, 80%);
+}
+
+footer div.information ul li a svg {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	fill: @color_ac_white;
+	transition: all 0.3s;
+}
+
+footer div.copyright {
+	display: inline-block;
+	text-align: left;
+}
+
+footer a {
+	color: white;
+	text-decoration: underline;
+}
+
+footer a:hover {
+	text-decoration: none;
+}

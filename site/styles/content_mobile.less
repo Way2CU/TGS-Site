@@ -1,0 +1,243 @@
+/**
+ * Main mobile Style Sheet
+ * TGS Site
+ *
+ * Copyright (c) 2015. by Way2CU, http://way2cu.com
+ * Authors:Tal Reznic
+ */
+div#intro {
+	display: block;
+	padding-top: 10px;
+	padding-bottom: 50px;
+	text-align: center;
+	margin-top: 53px;
+	background-image: url(../images/mobile-header-background.jpg);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: 100% auto;
+	min-height: 475px;
+}
+
+section,
+div#locations,
+div#features,
+div#video {
+	margin-top: 0px;
+	min-height: auto;
+	text-align: center;
+	background-image: none;
+	position: relative;
+}
+
+div#video {
+	background-color: @color_ac_white;
+}
+
+div#video:before {
+	content: "";
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 150px;
+	background-color: @color_ac_blue;
+}
+
+section article.about {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	width: 95%;
+}
+
+section article.about h2 {
+	text-align: left;
+}
+
+section article.about p {
+	font-size: 1.2em;
+}
+
+section.grey {
+	background-color: @color_ac_bright_grey;
+}
+
+section.white,
+section.header {
+	padding: 0px;
+	display: block;
+	text-align: center;
+	width: 100%;
+	height: 350px;
+
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 100% auto;
+}
+
+section.white:before,
+section.header:before {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+}
+
+section.white div.content p,
+section.white div.content h1,
+section.header div.content p,
+section.header div.content h1 {
+	color: @color_text;
+	font-style: italic;
+	text-shadow: 1px 1px fade(@color_ac_white,80%);
+}
+
+section.white div.content p,
+section.white div.content h1 {
+	color: @color_ac_white;
+	text-shadow: 1px 1px fade(@color_text,80%);
+}
+
+div#features {
+	background-color: @color_ac_blue;
+	color: @color_ac_grey;
+}
+
+section h2,
+div#locations h2,
+div#video h2 {
+	text-align: center;
+	margin: 0px;
+	font-size: 2em;
+}
+
+div#locations p,
+div#video p {
+	margin-left: auto;
+	margin-right: auto;
+	font-weight: 400;
+	font-size: 1.2em;
+	width: 95%;
+}
+
+div#video p,
+div#video h2 {
+	color: @color_ac_blue;
+}
+
+div#video div.video_wrap {
+	display: inline-block;
+	border: 3px solid @color_ac_grey;
+	border-radius: @border-radius + 10px;
+	position: relative;
+	overflow: hidden;
+}
+
+div#video div.video_wrap iframe {
+	display: block;
+	padding: 15px;
+	background-color: @color_text;
+}
+
+div#intro h1 {
+	margin: 0px;
+	color: @color_ac_blue;
+	font-weight: 400;
+	font-style: italic;
+	font-size: 2em;
+}
+
+div#intro strong {
+	display: block;
+	font-size: 1em;
+	font-style: normal;
+}
+
+div.job_form > a,
+div#intro a {
+	display: inline-block;
+	text-decoration: none;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: @color_ac_white;
+	border: 2px solid @color_ac_blue;
+	border-radius: @border-radius;
+	background-color: @color_ac_blue;
+	font-size: 1.5em;
+	line-height: 100%;
+	position: relative;
+	overflow: hidden;
+	transition: all 0.3s;
+	z-index: 0;
+}
+
+// features section
+div#features ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+div#features ul li {
+	display: block;
+	vertical-align: top;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-left: 15px;
+	margin-right: 15px;
+	border-bottom: 1px solid fade(@color_ac_white, 20%);
+}
+
+div#features ul li:last-of-type {
+	border-bottom: none;
+}
+
+div#features ul li svg {
+	display: inline-block;
+	width: 65px;
+	height: 65px;
+	fill: @color_ac_white;
+}
+
+div#features ul li h4 {
+	margin: 0px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	color: @color_ac_white;
+	font-weight: 400;
+	font-size: 2em;
+	font-family: signika;
+}
+
+div#features ul li p {
+	margin: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 25px;
+	padding-right: 25px;
+	color: @color_ac_white;
+	font-size: 1.2em;
+	border-right: 1px solid @color_ac_blue;
+}
+
+div#features ul li:last-of-type p {
+	border-right: none;
+}
+
+div#locations{
+	display: block;
+	padding-top: 15px;
+	padding-bottom: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url(../images/map.png);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: 100% auto;
+	min-height: 178px;
+	position: relative;
+}
