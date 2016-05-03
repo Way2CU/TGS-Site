@@ -106,6 +106,11 @@ section.header div.content h1 {
 	text-shadow: 1px 1px fade(@color_ac_white,80%);
 }
 
+section.header div.content h1,
+section.white div.content h1 {
+	font-size: 5rem;
+}
+
 section.white div.content p,
 section.white div.content h1 {
 	color: @color_ac_white;
@@ -1092,3 +1097,7 @@ div.dialog div.title {
 	text-align: center;
 }
 
+div.dialog.visible {
+	top: 30px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+}
