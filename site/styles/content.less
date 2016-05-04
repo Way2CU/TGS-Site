@@ -353,6 +353,10 @@ div#form_wrap {
 	padding: 50px calc(~'(100% - 1200px)'/ 2);
 }
 
+div#form_wrap form {
+	margin-bottom: 40px;
+}
+
 div#form_wrap fieldset {
 	display: inline-block;
 	vertical-align: top;
@@ -512,6 +516,23 @@ div#form_wrap div.controls button:before {
 div.fixed_form div.controls button:hover,
 div#form_wrap div.controls button:hover {
 	color: @color_ac_white;
+}
+
+div#form_wrap a.map {
+	display: block;
+	overflow: hidden;
+}
+
+div#form_wrap a.map img {
+	display: block;
+	width: 1200px;
+	height: 300px;
+	transform: scale(1);
+	transition: all 0.3s;
+}
+
+div#form_wrap a.map:hover img {
+	transform: scale(1.3);
 }
 
 section a.brand {
