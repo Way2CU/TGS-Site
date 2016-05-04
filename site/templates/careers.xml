@@ -30,6 +30,7 @@
 					name="articles"
 					action="show_list"
 					group="jobs_features"
+					order_by="text_id"
 					template="parts/job_labels.xml"
 					>
 					<param name="title" value=""/>
