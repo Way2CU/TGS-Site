@@ -16,7 +16,8 @@
 				<svg>
 					<use
 						href="#google"
-						xlink:href="site/images/site-sprite.svg#google"
+						xlink:href="_BASEURL.'/site/images/site-sprite.svg#google'"
+						cms:eval="xlink:href"
 						/>
 				</svg>
 			</a>
@@ -29,7 +30,8 @@
 				<svg>
 					<use
 						href="#icon-facebook"
-						xlink:href="site/images/site-sprite.svg#icon-facebook"
+						xlink:href="_BASEURL.'/site/images/site-sprite.svg#icon-facebook'"
+						cms:eval="xlink:href"
 						/>
 				</svg>
 			</a>
@@ -42,7 +44,8 @@
 				<svg>
 					<use
 						href="#icon-linkedin"
-						xlink:href="site/images/site-sprite.svg#icon-linkedin"
+						xlink:href="_BASEURL.'/site/images/site-sprite.svg#icon-linkedin'"
+						cms:eval="xlink:href"
 						/>
 				</svg>
 			</a>
@@ -55,7 +58,8 @@
 				<svg>
 					<use
 						href="#twitter"
-						xlink:href="site/images/site-sprite.svg#twitter"
+						xlink:href="_BASEURL.'/site/images/site-sprite.svg#twitter'"
+						cms:eval="xlink:href"
 						/>
 				</svg>
 			</a>
