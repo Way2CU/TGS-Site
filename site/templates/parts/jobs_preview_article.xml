@@ -1,10 +1,16 @@
 <document>
 	<article class="job_preview visible" data-id="$params['text_id']" cms:eval="data-id">
-		<h4>
-			<cms:var param="title" multilanguage="yes"/>
-		</h4>
+		<a 	
+			href="url_Make('view', 'careers', array('id', $params['id']), array('job', str_replace(' ', '-', $params['title'][$language])))"
+			cms:eval="href"
+			>
+			<h4>
+				<cms:var param="title" multilanguage="yes"/>
+			</h4>
+		</a>
 		<cms:markdown param="content" multilanguage="yes"/>
 		<a
+			class="preview"
 			href="url_Make('view', 'careers', array('id', $params['id']), array('job', str_replace(' ', '-', $params['title'][$language])))"
 			cms:eval="href"
 			>
