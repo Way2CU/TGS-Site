@@ -6,6 +6,7 @@
 			name="gallery"
 			action="show_group_list"
 			container_id="$params['id']"
+			order_by="text_id"
 			template="parts/team_members_list.xml"
 			cms:eval="container_id"
 			/>
