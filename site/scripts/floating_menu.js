@@ -34,10 +34,12 @@ function FloatingMenu(menu, trigger_element) {
 		
 		if (over_position && !self.active) {
 			self.menu.addClass('active');
+			$('body').addClass('active');
 			self.active = true;
 
 		} else if (!over_position && self.active) {
 			self.menu.removeClass('active');
+			$('body').removeClass('active');
 			self.active = false;
 		}
 	};
