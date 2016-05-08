@@ -52,7 +52,6 @@ function animate(container,container_elements,trigger_element,delay_time) {
 	 }
 
 	 self.handle_active = function(item) {
-	 	console.log(item);
 	 	item.addClass('active');
 	 }
 
