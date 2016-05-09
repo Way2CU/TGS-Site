@@ -60,5 +60,6 @@ function animate(container,container_elements,trigger_element,delay_time) {
  }
 
 $(function() {
+	if(!Site.is_mobile())
 	Site.animate = new animate($('ul#timeline'),$('ul#timeline li'),$('section.header'),800)
 })

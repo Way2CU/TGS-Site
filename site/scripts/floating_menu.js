@@ -50,9 +50,11 @@ function FloatingMenu(menu, trigger_element) {
 
 $(function() {
 	// create floating menu object
-	if($('div#intro').length > 0 || $('div.pictures').length > 0 ) {
-		Site.menu = new FloatingMenu($('header'),$('header'));
-	} else {
-		Site.menu = new FloatingMenu($('header'),$('section').first().next());
-	}
+	if(!Site.is_mobile()) {
+		if($('div#intro').length > 0 || $('div.pictures').length > 0 ) {
+			Site.menu = new FloatingMenu($('header'),$('header'));
+		} else {
+			Site.menu = new FloatingMenu($('header'),$('section').first().next());
+		}
+	}	
 })

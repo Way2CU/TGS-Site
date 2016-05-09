@@ -1,13 +1,29 @@
 <document>
-	<li>
-		<img 
-			src="$params['image']" 
-			alt="$params['title'][$language]"
-			cms:eval="src,alt"
-			/>
-		<div>
-			<cms:markdown param="description" multilanguage="yes"/>
-		</div>
-		<span><cms:var param="title" multilanguage="yes"/></span>
-	</li>
+	<cms:desktop>
+		<li>
+			<img 
+				src="$params['image']" 
+				alt="$params['title'][$language]"
+				cms:eval="src,alt"
+				/>
+			<div>
+				<cms:markdown param="description" multilanguage="yes"/>
+			</div>
+			<span><cms:var param="title" multilanguage="yes"/></span>
+		</li>
+	</cms:desktop>
+
+	<cms:mobile>
+		<li>
+			<span><cms:var param="title" multilanguage="yes"/></span>
+			<div>
+				<cms:markdown param="description" multilanguage="yes"/>
+				<img 
+					src="$params['image']" 
+					alt="$params['title'][$language]"
+					cms:eval="src,alt"
+					/>
+			</div>
+		</li>
+	</cms:mobile>
 </document>

@@ -31,7 +31,12 @@
 						text_id="contact"
 						/>
 					<a  href="https://www.google.co.il/maps/place/%D7%A9%D7%9E%D7%A9%D7%95%D7%9F+5,+%D7%A4%D7%AA%D7%97+%D7%AA%D7%A7%D7%95%D7%95%D7%94%E2%80%AD/@32.0949845,34.8664307,17z/data=!3m1!4b1!4m2!3m1!1s0x151d361d3334c203:0xa077abf00374b7ae" target="_blank" class="map">
-						<img src="_BASEURL.'/site/images/footer-google-map.jpg'"  alt="map" cms:eval="src"/>
+						<cms:desktop>
+							<img src="_BASEURL.'/site/images/google-map.jpg'"  alt="map" cms:eval="src"/>
+						</cms:desktop>
+						<cms:mobile>
+							<img src="_BASEURL.'/site/images/footer-google-map.jpg'"  alt="map" cms:eval="src"/>
+						</cms:mobile>
 					</a>
 				</div>
 

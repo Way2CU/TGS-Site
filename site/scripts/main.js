@@ -49,7 +49,7 @@ Site.is_mobile = function() {
  * Function called when document and images have been completely loaded.
  */
 Site.on_load = function() {
-	if (Site.is_mobile())
+	if (Site.is_mobile()) 
 		Site.mobile_menu = new Caracal.MobileMenu();
 
 	// function for filtering jobs
@@ -65,11 +65,14 @@ Site.on_load = function() {
 	});
 
 	// create dialog for job form
-	Site.dialog  = new Dialog();
+	Site.dialog = new Dialog();
 	Site.dialog
-		.setSize(500,500)
 		.setTitle(language_handler.getText(null, 'button_apply_position'))
 		.setContentFromDOM('div.fixed_form');
+
+	if(Site.is_mobile())
+		Site.dialog.setSize('90vw', '70vh'); else
+		Site.dialog.setSize(500, 500);
 
 	var submit_button = $('<a>');
 	submit_button

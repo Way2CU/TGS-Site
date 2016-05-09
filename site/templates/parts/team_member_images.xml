@@ -1,10 +1,23 @@
 <document>
-	<img 
-		class="$params['text_id']" 
-		src="$params['image']" 
-		alt="$params['title'][$language]" 
-		cms:eval="src,alt,class"
-		/>
-	<p class="name"><cms:var param="title" multilanguage="yes"/></p>
-	<cms:markdown param="description" multilanguage="yes"/>
+	<cms:desktop>
+		<img 
+			class="$params['text_id']" 
+			src="$params['image']" 
+			alt="$params['title'][$language]" 
+			cms:eval="src,alt,class"
+			/>
+		<p class="name"><cms:var param="title" multilanguage="yes"/></p>
+		<cms:markdown param="description" multilanguage="yes"/>
+	</cms:desktop>
+
+	<cms:mobile>
+		<img 
+			class="$params['text_id']" 
+			src="gallery::getThumbnailById($params['id'], null, 150,Thumbnail::CONSTRAIN_WIDTH)"
+			alt="$params['title'][$language]" 
+			cms:eval="src,alt,class"
+			/>
+		<p class="name"><cms:var param="title" multilanguage="yes"/></p>
+		<cms:markdown param="description" multilanguage="yes"/>
+	</cms:mobile>
 </document>
