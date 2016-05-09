@@ -51,17 +51,19 @@ function Tween(target, start_value, end_value, duration) {
 }
 
 $(function() {
-	var self_window = $(window);
-	var is_position = true;
-	var position = $('header').offset().top - 800;
-	var features_links = $('div#features li.stock.feature');
+	if (!Site.is_mobile()) {
+		var self_window = $(window);
+		var is_position = true;
+		var position = $('header').offset().top - 800;
+		var features_links = $('div#features li.stock.feature');
 
-	if(self_window.scrollTop() >= position && is_position) {
-		is_position = false;
-		features_links.each(function() {
-			var self = $(this);
-			var end_value = parseInt(self.find('h4').text());
-			new Tween(self.find('h4'),0, end_value,3000);
-		});
+		if(self_window.scrollTop() >= position && is_position) {
+			is_position = false;
+			features_links.each(function() {
+				var self = $(this);
+				var end_value = parseInt(self.find('h4').text());
+				new Tween(self.find('h4'),0, end_value,3000);
+			});
+		}
 	}
 })
