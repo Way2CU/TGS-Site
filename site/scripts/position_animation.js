@@ -2,7 +2,7 @@
 // create or use existing site scope
 var Site = Site || {};
 
-function PositionAnimation(elements) {
+Site.PositionAnimation = function(elements) {
 	var self = this;
 
 	self.elements = Array.from(document.querySelectorAll(elements));
@@ -20,10 +20,12 @@ function PositionAnimation(elements) {
 
 		// show list items
 		var to_show = new Array();
-		for (var element of self.elements)
+
+		self.elements.forEach( function(element) {
 			if (window.scrollY >= element.offsetTop + element.clientHeight) 
 				element.classList.add('active'); else
 				to_show.push(element);
+		});
 
 		// replace item list with new one
 		self.elements = to_show;
@@ -34,5 +36,5 @@ function PositionAnimation(elements) {
 }
 
 $(function() {
-	Site.scroll = new PositionAnimation('ul#timeline li');
+	Site.scroll = new Site.PositionAnimation('ul#timeline li');
 });
