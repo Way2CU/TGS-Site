@@ -1,3 +1,4 @@
+
 <document>
 	<section class="header" style="'background-image: url('.$params['image'].');'" cms:eval="style">
 		<div class="content">
