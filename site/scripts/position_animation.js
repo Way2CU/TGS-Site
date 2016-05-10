@@ -21,7 +21,7 @@ Site.PositionAnimation = function(elements) {
 		// show list items
 		var to_show = new Array();
 
-		self.elements.forEach( function(element) {
+		self.elements.forEach(function(element) {
 			if (window.scrollY >= element.offsetTop + element.clientHeight) 
 				element.classList.add('active'); else
 				to_show.push(element);
