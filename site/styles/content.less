@@ -975,12 +975,13 @@ ul#timeline:before {
 
 ul#timeline li {
 	display: block;
-	margin-bottom: 40px;
+	margin-bottom: 80px;
 	position: relative;
 	text-align: right;
 	opacity: 0;
 	width: 50%;
-	transition: all 0.5s;
+	transition: all 0.6s;
+	transition-delay: 0.6s;
 }
 
 ul#timeline li.active {
@@ -1061,7 +1062,7 @@ ul#timeline li p:after {
 	transform: rotate(45deg);
 	z-index: -1;
 	transition: all 0.3s;
-	transition-delay: 0.6s;
+	transition-delay: 0.8s;
 }
 
 ul#timeline li.active p:after {
@@ -1071,7 +1072,7 @@ ul#timeline li.active p:after {
 ul#timeline li:nth-child(even) p:after {
 	right: 90%;
 	transition: all 0.3s;
-	transition-delay: 0.6s;
+	transition-delay: 0.8s;
 }
 
 ul#timeline li.active:nth-child(even) p:after {
@@ -1115,7 +1116,7 @@ ul#timeline li span:after {
 	height: 1px;
 	background-color: @color_ac_blue;
 	transition: all 0.3s;
-	transition-delay: 0.3s;
+	transition-delay: 0.9s;
 }
 
 ul#timeline li.active span:after {
