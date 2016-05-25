@@ -51,7 +51,6 @@ function Tween(target, start_value, end_value, duration) {
 }
 
 $(function() {
-	if (!Site.is_mobile()) {
 		var self_window = $(window);
 		var is_position = true;
 		var position = $('header').offset().top - 800;
@@ -65,5 +64,5 @@ $(function() {
 				new Tween(self.find('h4'),0, end_value,3000);
 			});
 		}
-	}
-})
+
+});
