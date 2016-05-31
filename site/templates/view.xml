@@ -10,10 +10,6 @@
 				<cms:text constant="menu_careers"/>
 			</title>
 			<link href='https://fonts.googleapis.com/css?family=Signika:400,700' rel='stylesheet' type='text/css'/>
-			<meta property="og:title" content="site_title" cms:constant="content"/>
-			<meta property="og:type" content="website" />
-			<meta property="og:url" content="http://tgs.way2cu-usa1.com" />
-			<meta property="og:image" content="_BASEURL.'/site/images/airplane.jpg'" cms:eval="content"/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
