@@ -66,7 +66,7 @@ $(function() {
 			var self = $(this);
 			var end_value = parseInt(self.find('h4').text());
 			if(!Site.is_mobile())
-				new Tween(self.find('h4'),0, end_value,3000); else
+				new Tween(self.find('h4'),0, end_value,5000); else
 				new Tween(self.find('h4'),0, end_value,8000);
 		});
 	}
