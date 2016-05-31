@@ -68,6 +68,7 @@ Site.on_load = function() {
 	Site.dialog = new Dialog();
 	Site.dialog
 		.setTitle(language_handler.getText(null, 'button_apply_position'))
+		.addClass('custom')
 		.setContentFromDOM('div.fixed_form');
 
 	if(Site.is_mobile())
