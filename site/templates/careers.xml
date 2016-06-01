@@ -42,6 +42,8 @@
 				<cms:module
 					name="articles"
 					action="show_list"
+					order_by="timestamp"
+					order_asc="0"
 					group="jobs"
 					template="parts/jobs_preview_article.xml"
 					/>
