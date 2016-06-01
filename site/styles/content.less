@@ -73,11 +73,12 @@ section.header {
 	padding: 0px;
 	display: block;
 	text-align: center;
-	width: 100%;
-	height: 500px;
+	width: 100vw;
+	height: calc(~'(100vw * 0.30)');
 
 	background-repeat: no-repeat;
 	background-position: center top;
+	background-size: 100% auto;
 	background-attachment: fixed;
 }
 
@@ -1188,8 +1189,19 @@ section article.about {
 	background-position: center bottom;
 }
 
+article.job_preview {
+	min-height: 180px;
+}
+
 div.social p {
 	display: block;
+}
+
+div#form_wrap a.map img {
+	margin-left: auto;
+	margin-right: auto;
+	width: 600px;
+	height: auto;
 }
 
 }
