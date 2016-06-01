@@ -575,7 +575,7 @@ ul.team li {
 	vertical-align: top;
 	padding-top: 195px;
 	padding-bottom: 40px;
-	width: 25%;
+	width: 33.3%;
 	position: relative;
 }
 
@@ -586,7 +586,7 @@ ul.team li:hover p {
 ul.team li a {
 	position: absolute;
 	top: 160px;
-	right: 55px;
+	right: 25px;
 	width: 35px;
 	height: 35px;
 	background-image: url(../images/linkedin-letter.svg);
@@ -603,7 +603,7 @@ ul.team li:hover a {
 }
 
 ul.team li p.name {
-	padding-top: 10px;
+	margin-top: 10px;
 	font-weight: 700;
 	font-size: 1.2em;
 	transition: all 0.3s;
@@ -1145,4 +1145,51 @@ div.dialog div.title {
 div.dialog.visible {
 	top: 30px;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+}
+
+/*
+ * Tablet version
+ */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+header.active,
+header {
+	text-align: center;
+	width: auto;
+	left: 0;
+	right: 0;
+}
+
+header nav {
+	width: auto;
+}
+
+header a.logo {
+	margin-right: 2em;
+}
+
+div#intro {
+	padding: 100px calc(~'(100vw - 750px)' / 2);
+}
+
+section {
+	padding: 40px calc(~'(100vw - 750px)' / 2);
+}
+
+div#intro h1 {
+	font-size: 3.5em;
+}
+
+section article.about {
+	padding-bottom: 325px;
+	padding-left: 0px;
+	padding-right: 0px;
+	background-position: center bottom;
+}
+
+div.social p {
+	display: block;
+}
+
 }
